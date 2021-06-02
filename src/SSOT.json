@@ -1,0 +1,1008 @@
+{
+	"concerns": [
+		{
+			"title": "Contradicting decisions",
+			"body": "SSOT might include multiple, conflicting decisions in regards to the same question.",
+			"possibleSolutions": [
+				"Require questions states as a mandatory part of the SSOT format.",
+				"Address most of the potential contradiction cases by explicitly providing both explicit and implicit values."
+			]
+		}
+	],
+	"about": {
+		"ssot": {
+			"description": "SSOT - Single Source Of Truth - the place where design systems starts."
+		},
+		"system": {
+			"name": "Berries",
+			"motto": "Everything is connected.",
+			"subTitle": "A design system for building web applications",
+			"description": "",
+			"paragraphs": [
+				"Unlike most of the design systems Berries starts from a single file.\nThis file contains the fundamental properties, guidelines and instructions of the system - a DNA if you will. It's the place where the most important design decisions are expressed and articulated."
+			]
+		}
+	},
+	"principles": {
+		"modular-scale": {
+			"name": "Modular Scale",
+			"definition": "A modular scale is a sequence of numbers that relate to one another in a meaningful way. Using the golden ratio, for example, we can produce values for a modular scale by multiplying by 1.618 to arrive at the next highest number, or dividing by 1.618 to arrive at the next number down.",
+			"source": "https://alistapart.com/article/more-meaningful-typography"
+		},
+		"SAPBN": {
+			"name": "Simple As Possible, But No Simpler",
+			"definition": "A modular scale is a sequence of numbers that relate to one another in a meaningful way. Using the golden ratio, for example, we can produce values for a modular scale by multiplying by 1.618 to arrive at the next highest number, or dividing by 1.618 to arrive at the next number down.",
+			"source": "https://alistapart.com/article/more-meaningful-typography",
+			"quote": "Everything should be made as simple as possible, but no simpler. Albert Einstein."
+		}
+	},
+	"nomenclature": {
+		"title": "Practical Nomenclature",
+		"subTitle": "Functional. Finite. Consistent.",
+		"paragraphs": [
+			{
+				"title": "Good naming is crucial",
+				"paragraph": ""
+			},
+			{
+				"title": "Naming is hard",
+				"paragraph": ""
+			},
+			{
+				"title": "Naming in Berries",
+				"paragraph": ""
+			}
+		]
+	},
+	"typography": {
+		"reasoning": [
+			{
+				"title": "Why Roboto family?",
+				"paragraphs": [
+					"This is why."
+				]
+			},
+			{
+				"title": "Why italic styles are not included?",
+				"paragraphs": [
+					"This is why."
+				]
+			}
+		],
+		"families": [
+			{
+				"name": "Roboto",
+				"about": "Roboto has a dual nature. It has a mechanical skeleton and the forms are largely geometric. At the same time, the font features friendly and open curves. While some grotesks distort their letterforms to force a rigid rhythm, Roboto doesn’t compromise, allowing letters to be settled into their natural width. This makes for a more natural reading rhythm more commonly found in humanist and serif types. (src: https://fonts.google.com/specimen/Roboto#about)",
+				"weights": [
+					{
+						"thin": 100
+					},
+					{
+						"light": 300
+					},
+					{
+						"regular": 400
+					},
+					{
+						"default": 500
+					},
+					{
+						"bold": 700
+					},
+					{
+						"black": 900
+					}
+				]
+			},
+			{
+				"name": "Roboto Condensed",
+				"about": "This is the Condensed family, which can be used alongside the normal Roboto family and the Roboto Slab family. (src: https://fonts.google.com/specimen/Roboto+Condensed?query=roboto#about)",
+				"weights": [
+					{
+						"light": 300
+					},
+					{
+						"regular": 400
+					},
+					{
+						"bold": 700
+					}
+				]
+			},
+			{
+				"name": "Roboto Mono",
+				"about": "This is the Condensed family, which can be used alongside the normal Roboto family and the Roboto Slab family. (src: https://fonts.google.com/specimen/Roboto+Condensed?query=roboto#about)",
+				"weights": [
+					{
+						"light": 300
+					},
+					{
+						"regular": 400
+					},
+					{
+						"bold": 700
+					}
+				]
+			}
+		],
+		"sizes": {
+			"list": [
+				{
+					"name": "2xs",
+					"value": 10
+				},
+				{
+					"name": "xs",
+					"value": 11
+				},
+				{
+					"name": "sm",
+					"value": 12
+				},
+				{
+					"name": "md",
+					"value": 14
+				},
+				{
+					"name": "lg",
+					"value": 16
+				},
+				{
+					"name": "xl",
+					"value": 20
+				},
+				{
+					"name": "2xl",
+					"value": 24
+				},
+				{
+					"name": "3xl",
+					"value": 32
+				},
+				{
+					"name": "4xl",
+					"value": 42
+				},
+				{
+					"name": "5xl",
+					"value": 64
+				}
+			]
+		},
+		"intensity": {
+			"reasoning": [
+				{
+					"decision": "Naming",
+					"article": "Article about why border widths names have such names."
+				},
+				{
+					"decision": "Values",
+					"article": "Article about why border widths have such values."
+				}
+			],
+			"default": {
+				"reasoning": [],
+				"name": "default",
+				"value": 0.7
+			},
+			"list": [
+				{
+					"name": "weakest",
+					"value": 0.4
+				},
+				{
+					"name": "weak",
+					"value": 0.55
+				},
+				{
+					"name": "default",
+					"value": 0.7
+				},
+				{
+					"name": "strong",
+					"value": 0.85
+				},
+				{
+					"name": "strongest",
+					"value": 1
+				}
+			]
+		}
+	},
+	"colors": {
+		"reasoning": [
+			{
+				"title": "Why HSL",
+				"paragraphs": [
+					"This is why."
+				]
+			},
+			{
+				"title": "Why so small amount of colors?",
+				"paragraphs": [
+					"This is why."
+				]
+			},
+			{
+				"title": "Why so many shades and tints?",
+				"paragraphs": [
+					{
+						"header": "Not so many",
+						"body": "Following the the principle of including the minimal amount of options there are only three shades and three tints.",
+						"sources": [
+							{
+								"name": "Precautionary statement",
+								"internalReference": "principles/SAPBN"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Naming",
+				"paragraphs": [
+					{
+						"header": "Precautionary statement",
+						"body": "This is why.",
+						"sources": [
+							{
+								"name": "Precautionary statement",
+								"link": "https://en.wikipedia.org/wiki/Precautionary_statement"
+							}
+						]
+					}
+				]
+			}
+		],
+		"list": [
+			{
+				"name": "brand",
+				"hsl": [
+					340,
+					"72%",
+					"62%"
+				],
+				"lightness": [
+					{
+						"name": "lightest",
+						"value": 1.45
+					},
+					{
+						"name": "lighter",
+						"value": 1.3
+					},
+					{
+						"name": "light",
+						"value": 1.15
+					},
+					{
+						"name": "default",
+						"value": 1
+					},
+					{
+						"name": "dark",
+						"value": 0.83
+					},
+					{
+						"name": "darker",
+						"value": 0.66
+					},
+					{
+						"name": "darkest",
+						"value": 0.5
+					}
+				],
+				"description": ""
+			},
+			{
+				"name": "primary",
+				"hsl": [
+					215,
+					"31%",
+					"26%"
+				],
+				"lightness": [
+					{
+						"name": "lightest",
+						"value": 1.6
+					},
+					{
+						"name": "lighter",
+						"value": 1.4
+					},
+					{
+						"name": "light",
+						"value": 1.2
+					},
+					{
+						"name": "default",
+						"value": 1
+					},
+					{
+						"name": "dark",
+						"value": 0.83
+					},
+					{
+						"name": "darker",
+						"value": 0.66
+					},
+					{
+						"name": "darkest",
+						"value": 0.5
+					}
+				],
+				"description": ""
+			},
+			{
+				"name": "info",
+				"hsl": [
+					208,
+					"100%",
+					"60%"
+				],
+				"lightness": [
+					{
+						"name": "lightest",
+						"value": 1.4
+					},
+					{
+						"name": "lighter",
+						"value": 1.3
+					},
+					{
+						"name": "light",
+						"value": 1.15
+					},
+					{
+						"name": "default",
+						"value": 1
+					},
+					{
+						"name": "dark",
+						"value": 0.85
+					},
+					{
+						"name": "darker",
+						"value": 0.7
+					},
+					{
+						"name": "darkest",
+						"value": 0.55
+					}
+				],
+				"description": ""
+			},
+			{
+				"name": "danger",
+				"hsl": [
+					0,
+					"86%",
+					"63%"
+				],
+				"lightness": [
+					{
+						"name": "lightest",
+						"value": 1.4
+					},
+					{
+						"name": "lighter",
+						"value": 1.3
+					},
+					{
+						"name": "light",
+						"value": 1.15
+					},
+					{
+						"name": "default",
+						"value": 1
+					},
+					{
+						"name": "dark",
+						"value": 0.85
+					},
+					{
+						"name": "darker",
+						"value": 0.7
+					},
+					{
+						"name": "darkest",
+						"value": 0.55
+					}
+				],
+				"description": ""
+			},
+			{
+				"name": "success",
+				"hsl": [
+					94,
+					"85%",
+					"38%"
+				],
+				"lightness": [
+					{
+						"name": "lightest",
+						"value": 1.6
+					},
+					{
+						"name": "lighter",
+						"value": 1.3
+					},
+					{
+						"name": "light",
+						"value": 1.15
+					},
+					{
+						"name": "default",
+						"value": 1
+					},
+					{
+						"name": "dark",
+						"value": 0.85
+					},
+					{
+						"name": "darker",
+						"value": 0.7
+					},
+					{
+						"name": "darkest",
+						"value": 0.55
+					}
+				],
+				"description": ""
+			},
+			{
+				"name": "warning",
+				"hsl": [
+					41,
+					"100%",
+					"50%"
+				],
+				"lightness": [
+					{
+						"name": "lightest",
+						"value": 1.45
+					},
+					{
+						"name": "lighter",
+						"value": 1.3
+					},
+					{
+						"name": "light",
+						"value": 1.15
+					},
+					{
+						"name": "default",
+						"value": 1
+					},
+					{
+						"name": "dark",
+						"value": 0.85
+					},
+					{
+						"name": "darker",
+						"value": 0.7
+					},
+					{
+						"name": "darkest",
+						"value": 0.55
+					}
+				],
+				"description": ""
+			}
+		]
+	},
+	"layoutColors": {
+		"reasoning": [
+			{
+				"title": "Three colors for layout",
+				"paragraphs": [
+					"This is why."
+				]
+			}
+		],
+		"list": [
+			{
+				"name": "content",
+				"hsl": [
+					0,
+					"0%",
+					"100%"
+				],
+				"description": ""
+			},
+			{
+				"name": "aside",
+				"hsl": [
+					0,
+					"0%",
+					"96%"
+				],
+				"description": ""
+			},
+			{
+				"name": "canvas",
+				"hsl": [
+					0,
+					"0%",
+					"92%"
+				],
+				"description": ""
+			}
+		]
+	},
+	"border": {
+		"style": {
+			"reasoning": [
+				{
+					"decision": "Naming",
+					"article": "Article about why border widths names have such names."
+				},
+				{
+					"decision": "Values",
+					"article": "Article about why border widths have such values."
+				}
+			],
+			"default": "",
+			"list": [
+				{
+					"name": "solid",
+					"value": "solid"
+				},
+				{
+					"name": "dashed",
+					"value": "dashed"
+				},
+				{
+					"name": "dotted",
+					"value": "dotted"
+				}
+			]
+		},
+		"width": {
+			"reasoning": [
+				{
+					"decision": "Naming",
+					"article": "Article about why border widths names have such names."
+				},
+				{
+					"decision": "Values",
+					"article": "Article about why border widths have such values."
+				}
+			],
+			"default": "",
+			"list": [
+				{
+					"name": "default",
+					"value": "1px"
+				},
+				{
+					"name": "0",
+					"value": "0px"
+				},
+				{
+					"name": "1",
+					"value": "1px"
+				},
+				{
+					"name": "bold",
+					"value": "2px"
+				},
+				{
+					"name": "bolder",
+					"value": "3px"
+				},
+				{
+					"name": "boldest",
+					"value": "5px"
+				}
+			]
+		},
+		"intensity": {
+			"reasoning": [
+				{
+					"decision": "Naming",
+					"article": "Article about why border widths names have such names."
+				},
+				{
+					"decision": "Values",
+					"article": "Article about why border widths have such values."
+				}
+			],
+			"default": {
+				"reasoning": [],
+				"name": "default",
+				"value": 0.09
+			},
+			"list": [
+				{
+					"name": "weakest",
+					"value": 0.03
+				},
+				{
+					"name": "weaker",
+					"value": 0.04
+				},
+				{
+					"name": "weak",
+					"value": 0.06
+				},
+				{
+					"name": "default",
+					"value": 0.09
+				},
+				{
+					"name": "strong",
+					"value": 0.14
+				},
+				{
+					"name": "stronger",
+					"value": 0.21
+				},
+				{
+					"name": "strongest",
+					"value": 0.27
+				}
+			]
+		},
+		"radius": {
+			"reasoning": [
+				{
+					"decision": "Naming",
+					"article": "Article about why border widths names have such names."
+				},
+				{
+					"decision": "Values",
+					"article": "Article about why border widths have such values."
+				}
+			],
+			"list": [
+				{
+					"name": "weakest",
+					"value": 0.03
+				},
+				{
+					"name": "weaker",
+					"value": 0.04
+				},
+				{
+					"name": "weak",
+					"value": 0.06
+				},
+				{
+					"name": "default",
+					"value": 0.09
+				},
+				{
+					"name": "strong",
+					"value": 0.14
+				},
+				{
+					"name": "stronger",
+					"value": 0.21
+				},
+				{
+					"name": "strongest",
+					"value": 0.32
+				}
+			]
+		},
+		"color": {
+			"reasoning": [
+				{
+					"decision": "Naming",
+					"article": "Article about why border widths names have such names."
+				},
+				{
+					"decision": "Values",
+					"article": "Article about why border widths have such values."
+				}
+			],
+			"default": "default",
+			"list": [
+				{
+					"name": "weakest",
+					"value": 0.03
+				},
+				{
+					"name": "weaker",
+					"value": 0.04
+				},
+				{
+					"name": "weak",
+					"value": 0.06
+				},
+				{
+					"name": "default",
+					"value": 0.09
+				},
+				{
+					"name": "strong",
+					"value": 0.14
+				},
+				{
+					"name": "stronger",
+					"value": 0.21
+				},
+				{
+					"name": "strongest",
+					"value": 0.32
+				}
+			]
+		}
+	},
+	"modularShades": {
+		"list": [
+			{
+				"name": "lightest",
+				"value": 1.6
+			},
+			{
+				"name": "lighter",
+				"value": 1.4
+			},
+			{
+				"name": "light",
+				"value": 1.2
+			},
+			{
+				"name": "default",
+				"value": 1
+			},
+			{
+				"name": "dark",
+				"value": 0.8
+			},
+			{
+				"name": "darker",
+				"value": 0.6
+			},
+			{
+				"name": "darkest",
+				"value": 0.4
+			}
+		]
+	},
+	"transparencies": {
+		"list": [
+			{
+				"name": "none",
+				"value": 0
+			},
+			{
+				"name": "strongest",
+				"value": 0.12
+			},
+			{
+				"name": "strong",
+				"value": 0.24
+			},
+			{
+				"name": "stronger",
+				"value": 0.36
+			},
+			{
+				"name": "default",
+				"value": 0.48
+			},
+			{
+				"name": "weak",
+				"value": 0.6
+			},
+			{
+				"name": "weaker",
+				"value": 0.72
+			},
+			{
+				"name": "weakest",
+				"value": 0.84
+			},
+			{
+				"name": "full",
+				"value": 1
+			}
+		]
+	},
+	"blurs": {
+		"reasoning": [
+			"The edges of the blur values spectrum are defined by the smallest noticeable value from one side and the smallest value that is capable to completely dissolve the body text behind.",
+			"All sizes are evenly distributed following the principle of modular scale."
+		],
+		"comments": [],
+		"default": "default",
+		"list": [
+			{
+				"name": "none",
+				"value": 0
+			},
+			{
+				"name": "weakest",
+				"value": 0.6
+			},
+			{
+				"name": "weaker",
+				"value": 0.9
+			},
+			{
+				"name": "weak",
+				"value": 1.4
+			},
+			{
+				"name": "default",
+				"value": 2.1
+			},
+			{
+				"name": "strong",
+				"value": 3
+			},
+			{
+				"name": "stronger",
+				"value": 4.5
+			},
+			{
+				"name": "strongest",
+				"value": 7
+			}
+		]
+	},
+	"shadows": {
+		"about": {
+			"title": "Shadows",
+			"body": "Shadows emphasize hierarchy of the UI layout. Elements with higher hierarchy cast shadow on the elements with lower hierarchy.",
+			"points": [
+				""
+			]
+		},
+		"opacityScaleRatio": 3,
+		"yOffsetToAmbientBlurRatio": 3,
+		"keyLayer": {
+			"reasoning": [
+				{
+					"title": "Why smallest key shadow is so small?",
+					"paragraphs": [
+						{
+							"header": "Smallest Useful Value",
+							"body": "Following the the principle of providing the Largest Range Of Useful Options (LROUO)... TBD",
+							"sources": [
+								{
+									"name": "Modular Scale",
+									"internalReference": {
+										"file": "./principles.json",
+										"section": "modular-scale"
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"offsetX": "0px",
+			"offsetY": "1px",
+			"blur": "3px"
+		},
+		"ambientLayer": {
+			"offsetX": "0px",
+			"offsetY": "4px",
+			"blur": "12px"
+		},
+		"sizes": {
+			"reasoning": [
+				{
+					"title": "Why smallest key shadow is so small?",
+					"paragraphs": [
+						{
+							"header": "Smallest Useful Value",
+							"body": "Following the the principle of providing the Largest Range Of Useful Options (LROUO)... TBD",
+							"sources": [
+								{
+									"name": "Modular Scale",
+									"internalReference": {
+										"file": "./principles.json",
+										"section": "modular-scale"
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"comments": [],
+			"default": "default",
+			"list": [
+				{
+					"name": "xs",
+					"keyLayer": {
+						"offsetY": "1px",
+						"blur": "1px"
+					},
+					"ambientLayer": {
+						"offsetY": "1px",
+						"blur": "3px"
+					}
+				},
+				{
+					"name": "sm",
+					"keyLayer": {
+						"offsetY": "1px",
+						"blur": "2px"
+					},
+					"ambientLayer": {
+						"offsetY": "2px",
+						"blur": "6px"
+					}
+				},
+				{
+					"name": "md",
+					"keyLayer": {
+						"offsetY": "1px",
+						"blur": "3px"
+					},
+					"ambientLayer": {
+						"offsetY": "4px",
+						"blur": "12px"
+					}
+				},
+				{
+					"name": "lg",
+					"keyLayer": {
+						"offsetY": "2px",
+						"blur": "5px"
+					},
+					"ambientLayer": {
+						"offsetY": "8px",
+						"blur": "24px"
+					}
+				},
+				{
+					"name": "xl",
+					"keyLayer": {
+						"offsetY": "6px",
+						"blur": "9px"
+					},
+					"ambientLayer": {
+						"offsetY": "16px",
+						"blur": "48px"
+					}
+				}
+			]
+		},
+		"intensity": {
+			"reasoning": [
+				{
+					"decision": "Naming",
+					"article": "Article about why border widths names have such names."
+				},
+				{
+					"decision": "Values",
+					"article": "Article about why border widths have such values."
+				}
+			],
+			"default": {
+				"reasoning": [],
+				"name": "default",
+				"value": 0.09
+			},
+			"list": [
+				{
+					"name": "weak",
+					"valueKey": 0.03,
+					"valueAmbient": 0.04
+				},
+				{
+					"name": "default"
+				},
+				{
+					"name": "strong"
+				}
+			]
+		}
+	},
+	"themes": {
+		"about": {
+			"title": "Nested Themes",
+			"body": "Dynamic nature of the system enables to maintain multiple, nested themes. With ease.",
+			"points": [
+				""
+			]
+		}
+	}
+}

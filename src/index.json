@@ -1,0 +1,1033 @@
+{
+    "processor": {
+        "version": "8.2.12",
+        "plugins": [
+            {
+                "postcssPlugin": "postcss-nested"
+            },
+            null,
+            null,
+            null,
+            {
+                "postcssPlugin": "autoprefixer",
+                "options": {}
+            },
+            null,
+            {
+                "postcssPlugin": "vite-url-rewrite"
+            }
+        ]
+    },
+    "messages": [
+        {
+            "type": "dependency",
+            "parent": "C:/dev/berries/src/index.css",
+            "file": "C:\\dev\\berries\\tailwind.config.js"
+        },
+        {
+            "type": "dependency",
+            "parent": "C:/dev/berries/src/index.css",
+            "file": "C:\\dev\\berries\\tw-generate-bg-colors.js"
+        },
+        {
+            "type": "dependency",
+            "parent": "C:/dev/berries/src/index.css",
+            "file": "C:\\dev\\berries\\keep.js"
+        },
+        {
+            "type": "dependency",
+            "parent": "C:/dev/berries/src/index.css",
+            "file": "C:\\dev\\berries\\postcss-test-plugin.js"
+        },
+        {
+            "type": "dependency",
+            "parent": "C:/dev/berries/src/index.css",
+            "file": "C:\\dev\\berries\\src\\SSOT.json"
+        },
+        {
+            "type": "dependency",
+            "parent": "C:/dev/berries/src/index.css",
+            "file": "C:\\dev\\berries\\src\\lib\\borders.js"
+        },
+        {
+            "type": "dependency",
+            "parent": "C:/dev/berries/src/index.css",
+            "file": "C:\\dev\\berries\\src\\SSOT.json"
+        }
+    ],
+    "root": {
+        "raws": {
+            "semicolon": true,
+            "after": "\n"
+        },
+        "type": "root",
+        "nodes": [
+            {
+                "raws": {
+                    "before": "",
+                    "after": "\n"
+                },
+                "type": "rule",
+                "nodes": [
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--h-primary",
+                        "value": "210",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--s-primary",
+                        "value": "100%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--l-primary",
+                        "value": "50%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--h-secondary",
+                        "value": "190",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--s-secondary",
+                        "value": "11%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--l-secondary",
+                        "value": "31%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--h-info",
+                        "value": "194",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--s-info",
+                        "value": "100%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--l-info",
+                        "value": "58%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--h-standout",
+                        "value": "275",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--s-standout",
+                        "value": "65%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--l-standout",
+                        "value": "41%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--h-danger",
+                        "value": "340",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--s-danger",
+                        "value": "100%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--l-danger",
+                        "value": "45%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--h-success",
+                        "value": "149",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--s-success",
+                        "value": "74%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--l-success",
+                        "value": "39%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--h-warning",
+                        "value": "41",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--s-warning",
+                        "value": "100%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--l-warning",
+                        "value": "50%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--h-content",
+                        "value": "0",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--s-content",
+                        "value": "0%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--l-content",
+                        "value": "100%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--h-aside",
+                        "value": "0",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--s-aside",
+                        "value": "0%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--l-aside",
+                        "value": "95%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--h-canvas",
+                        "value": "0",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--s-canvas",
+                        "value": "0%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--l-canvas",
+                        "value": "90%",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    }
+                ],
+                "selector": "#root",
+                "lastEach": 25,
+                "indexes": {},
+                "source": {
+                    "inputId": 0,
+                    "start": {
+                        "offset": 0,
+                        "line": 1,
+                        "column": 1
+                    },
+                    "end": {
+                        "offset": 14,
+                        "line": 1,
+                        "column": 15
+                    }
+                }
+            },
+            {
+                "raws": {
+                    "before": "\n\n",
+                    "after": "\n"
+                },
+                "type": "rule",
+                "nodes": [
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--color-primary",
+                        "value": "hsla( var(--h-primary), var(--s-primary), var(--l-primary), var(--opacity))",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--color-secondary",
+                        "value": "hsla( var(--h-secondary), var(--s-secondary), var(--l-secondary), var(--opacity))",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--color-info",
+                        "value": "hsla( var(--h-info), var(--s-info), var(--l-info), var(--opacity))",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--color-standout",
+                        "value": "hsla( var(--h-standout), var(--s-standout), var(--l-standout), var(--opacity))",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--color-danger",
+                        "value": "hsla( var(--h-danger), var(--s-danger), var(--l-danger), var(--opacity))",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--color-success",
+                        "value": "hsla( var(--h-success), var(--s-success), var(--l-success), var(--opacity))",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--color-warning",
+                        "value": "hsla( var(--h-warning), var(--s-warning), var(--l-warning), var(--opacity))",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--color-content",
+                        "value": "hsla( var(--h-content), var(--s-content), var(--l-content), var(--opacity))",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--color-aside",
+                        "value": "hsla( var(--h-aside), var(--s-aside), var(--l-aside), var(--opacity))",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    },
+                    {
+                        "raws": {
+                            "before": "\n  ",
+                            "after": "\n  "
+                        },
+                        "type": "decl",
+                        "prop": "--color-canvas",
+                        "value": "hsla( var(--h-canvas), var(--s-canvas), var(--l-canvas), var(--opacity))",
+                        "source": {
+                            "inputId": 0,
+                            "start": {
+                                "offset": 0,
+                                "line": 1,
+                                "column": 1
+                            },
+                            "end": {
+                                "offset": 14,
+                                "line": 1,
+                                "column": 15
+                            }
+                        }
+                    }
+                ],
+                "selector": "#root",
+                "lastEach": 25,
+                "indexes": {},
+                "source": {
+                    "inputId": 0,
+                    "start": {
+                        "offset": 0,
+                        "line": 1,
+                        "column": 1
+                    },
+                    "end": {
+                        "offset": 14,
+                        "line": 1,
+                        "column": 15
+                    }
+                }
+            }
+        ],
+        "source": {
+            "inputId": 0,
+            "start": {
+                "offset": 0,
+                "line": 1,
+                "column": 1
+            }
+        },
+        "lastEach": 24,
+        "indexes": {},
+        "rawCache": {
+            "beforeOpen": " ",
+            "semicolon": false,
+            "beforeRule": "\n",
+            "beforeDecl": "\n",
+            "indent": "    ",
+            "colon": ": ",
+            "beforeClose": "\n"
+        },
+        "inputs": [
+            {
+                "hasBOM": false,
+                "css": "@tailwind base;\n@tailwind components;\n@tailwind utilities;\n",
+                "file": "C:/dev/berries/src/index.css"
+            }
+        ]
+    },
+    "opts": {
+        "cwd": "C:\\dev\\berries",
+        "env": "development",
+        "to": "C:/dev/berries/src/index.css",
+        "from": "C:/dev/berries/src/index.css",
+        "map": {
+            "inline": false,
+            "annotation": false
+        }
+    }
+}
