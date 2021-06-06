@@ -10,18 +10,18 @@ module.exports = {
 		properties['--bs-direction'] = '1';
 		//
 		prop['--bs-key-rgba'] = 'rgba(var(--bs-key-rgb), var(--bs-key-op-default))',
-			prop['--bs-am-rgba'] = 'rgba(var(--bs-am-rgb), var(--bs-am-op-default))'
+		prop['--bs-am-rgba'] = 'rgba(var(--bs-am-rgb), var(--bs-am-op-default))'
 		properties['*'] = prop;
 		//
-		for ( let i = 0; i < ssot.shadows.intensity.list.length; i++ ) {
-			let intensity = ssot.shadows.intensity.list[i];
+		for ( let i = 0; i < ssot.shadows.strength.list.length; i++ ) {
+			let intensity = ssot.shadows.strength.list[i];
 			if ( i === 0 ) {
-				properties[`--bs-key-op-${intensity.name}`] = `${ssot.shadows.intensity.list[0].valueKey}`;
-				properties[`--bs-am-op-${intensity.name}`] = `${ssot.shadows.intensity.list[0].valueAmbient}`;
+				properties[`--bs-key-op-${intensity.name}`] = `${ssot.shadows.strength.list[0].valueKey}`;
+				properties[`--bs-am-op-${intensity.name}`] = `${ssot.shadows.strength.list[0].valueAmbient}`;
 			}
 			if ( i > 0 ) {
-				properties[`--bs-key-op-${intensity.name}`] = `calc(var(--bs-key-op-${ssot.shadows.intensity.list[i - 1].name}) * var(--op-ratio))`;
-				properties[`--bs-am-op-${intensity.name}`] = `calc(var(--bs-am-op-${ssot.shadows.intensity.list[i - 1].name}) * var(--op-ratio))`;
+				properties[`--bs-key-op-${intensity.name}`] = `calc(var(--bs-key-op-${ssot.shadows.strength.list[i - 1].name}) * var(--op-ratio))`;
+				properties[`--bs-am-op-${intensity.name}`] = `calc(var(--bs-am-op-${ssot.shadows.strength.list[i - 1].name}) * var(--op-ratio))`;
 			}
 		}
 		//
@@ -68,7 +68,7 @@ module.exports = {
 
 		//
 
-		ssot.shadows.intensity.list.forEach( intensity => {
+		ssot.shadows.strength.list.forEach( intensity => {
 			props[`.shadow-${intensity.name}`] = {
 				['--bs-key-rgba']: `rgba(var(--bs-key-rgb), var(--bs-key-op-${intensity.name}))`,
 				['--bs-am-rgba']: `rgba(var(--bs-am-rgb), var(--bs-am-op-${intensity.name}))`,

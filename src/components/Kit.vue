@@ -2,8 +2,8 @@
 	<div class="scroll-snap-type-proximity overflow-auto h-screen">
 		<div class="bg-primary-darkest flex items-center scroll-snap-align-start h-screen theme theme-dark">
 			<div class="max-w-5xl mx-auto text-center">
-				<h1 class="text-5xl font-black text-strongest mb-4">{{ ssot.about.system.name }}</h1>
-				<h1 class="text-2xl font-thin text-weakest">{{ ssot.about.system.subTitle }}</h1>
+				<h1 class="text-5xl font-semibold text-strongest mb-4">{{ ssot.about.system.name }}</h1>
+				<h1 class="text-2xl font-thin text-weak">{{ ssot.about.system.subTitle }}</h1>
 			</div>
 		</div>
 
@@ -29,8 +29,8 @@
 					</div>
 					<div class="">
 						<div class="font-black text-strongest mb-4">Strength</div>
-						<template v-for="(intensity, index) in ssot.border.intensity.list" :key="index">
-							<div class="font-mono font-medium">{{ intensity.name }}</div>
+						<template v-for="(strength, index) in ssot.border.strength.list" :key="index">
+							<div class="font-mono font-medium">{{ strength.name }}</div>
 						</template>
 					</div>
 					<div class="">
@@ -64,7 +64,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="bg-aside flex justify-center items-center scroll-snap-align-start h-screen theme theme-dark">
+		<div class="bg-primary-darkest flex justify-center items-center scroll-snap-align-start h-screen theme theme-dark">
 			<div class="container">
 				<div class="text-center max-w-[40ch] m-auto mb-16">
 					<div class="text-strong text-4xl font-light mb-5">
@@ -73,7 +73,7 @@
 					<div class="text-weak text-xl font-light">{{ ssot.themes.about.body }}</div>
 				</div>
 				<div class="grid grid-cols-2 gap-10">
-					<div class="w-full h-64 shadow-lg shadow-strongest bg-canvas flex flex-row rounded-md overflow-hidden">
+					<div class="w-full h-64 shadow-lg shadow-strongest bg-canvas flex flex-row rounded-md overflow-hidden theme theme-dark">
 						<div class="bg-aside w-24 border-r"></div>
 						<div class="flex-grow flex-col overflow-auto">
 							<div class="shadow-xs rounded-sm overflow-hidden m-5">
@@ -90,7 +90,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="w-full h-64 shadow-lg shadow-strongest bg-canvas flex flex-row rounded-md overflow-hidden theme">
+					<div class="w-full h-64 shadow-lg shadow-strongest bg-canvas flex flex-row rounded-md overflow-hidden theme theme-light">
 						<div class="bg-aside w-24 border-r"></div>
 						<div class="flex-grow flex-col overflow-auto">
 							<div class="shadow-xs rounded-sm overflow-hidden m-5">
@@ -113,11 +113,11 @@
 		<div class="flex items-center scroll-snap-align-start h-screen">
 			<div
 				class="grid max-w-5xl mx-auto auto-rows-max *gap-1 m-5 p-4"
-				:class="`grid-cols-${ssot.typography.intensity.list.length}`"
+				:class="`grid-cols-${ssot.typography.strength.list.length}`"
 			>
 				<template v-for="(size, index) in ssot.typography.sizes.list" :key="index">
-					<template v-for="(intensity, index) in ssot.typography.intensity.list" :key="index">
-						<div class="" :class="`text-${size.name} text-${intensity.name}`"> m </div>
+					<template v-for="(strength, index) in ssot.typography.strength.list" :key="index">
+						<div class="" :class="`text-${size.name} text-${strength.name}`"> m </div>
 					</template>
 				</template>
 			</div>
@@ -125,11 +125,11 @@
 		<div class="bg-aside flex items-center scroll-snap-align-start h-screen">
 			<div class="grid grid-cols-2 gap-32 max-w-5xl mx-auto">
 				<div class="col-6 grid auto-rows-max gap-10" :class="`grid-cols-${ssot.shadows.sizes.list.length}`">
-					<template v-for="(intensity, index) in ssot.shadows.intensity.list" :key="index">
+					<template v-for="(strength, index) in ssot.shadows.strength.list" :key="index">
 						<template v-for="(size, index) in ssot.shadows.sizes.list" :key="index">
 							<div
 								class="w-12 h-12 rounded-full bg-content transition duration-xs hover:shadow-xl"
-								:class="`shadow-${size.name} shadow-${intensity.name}`"
+								:class="`shadow-${size.name} shadow-${strength.name}`"
 							>
 							</div>
 						</template>
@@ -147,10 +147,10 @@
 			<div class="max-w-5xl mx-auto">
 				<div class="grid grid-cols-7 auto-rows-max gap-1">
 					<template class="" v-for="(color, index) in fullBorderColorsList" :key="index">
-						<template v-for="(intensity, index) in ssot.border.intensity.list" :key="index">
+						<template v-for="(strength, index) in ssot.border.strength.list" :key="index">
 							<div
 								class="w-12 h-12 rounded-full"
-								:class="`border border-boldest transition duration-xs hover:border-strongest border-${color.name} border-${intensity.name}`"
+								:class="`border border-boldest transition duration-xs hover:border-strongest border-${color.name} border-${strength.name}`"
 							></div>
 						</template>
 					</template>

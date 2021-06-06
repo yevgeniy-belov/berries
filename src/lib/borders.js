@@ -5,7 +5,7 @@ const sides = [
 module.exports = {
 
   rootVars: function ( ssot ) {
-    let defaultColor = ssot.border.intensity.default;
+    let defaultColor = ssot.border.strength.default;
     let property = {};
     let properties = {};
 
@@ -22,7 +22,7 @@ module.exports = {
       property[`--border${side}-lightness`] = 'var(--fg-lightness)';
 
     } );
-    properties['#root'] = property;
+    properties['.theme'] = property;
 
     return property
   },
@@ -144,8 +144,8 @@ module.exports = {
   },
 
   rules: function ( ssot ) {
-    let intensities = ssot.border.intensity.list;
-    let defaultColor = ssot.border.intensity.default;
+    let intensities = ssot.border.strength.list;
+    let defaultColor = ssot.border.strength.default;
     let weakestIntensity = '';
     intensities.forEach( intensity => {
       if ( intensity.name === 'weakest' ) {
@@ -160,7 +160,7 @@ module.exports = {
       ...module.exports.colors( 'all-sides', ssot.colors.list, defaultColor ),
       ...module.exports.colors( 'per-side', ssot.colors.list, defaultColor ),
       //
-      ...module.exports.property( 'alpha-factor', ssot.border.intensity.list ),
+      ...module.exports.property( 'alpha-factor', ssot.border.strength.list ),
       ...module.exports.property( 'width', ssot.border.width.list ),
       ...module.exports.property( 'style', ssot.border.style.list ),
 

@@ -57,7 +57,7 @@
 	"typography": {
 		"reasoning": [
 			{
-				"title": "Why Roboto family?",
+				"title": "Why Open Sans family?",
 				"paragraphs": [
 					"This is why."
 				]
@@ -71,26 +71,24 @@
 		],
 		"families": [
 			{
-				"name": "Roboto",
-				"about": "Roboto has a dual nature. It has a mechanical skeleton and the forms are largely geometric. At the same time, the font features friendly and open curves. While some grotesks distort their letterforms to force a rigid rhythm, Roboto doesn’t compromise, allowing letters to be settled into their natural width. This makes for a more natural reading rhythm more commonly found in humanist and serif types. (src: https://fonts.google.com/specimen/Roboto#about)",
+				"name": "Open Sans",
+				"about": "",
 				"weights": [
-					{
-						"thin": 100
-					},
+					
 					{
 						"light": 300
 					},
 					{
-						"regular": 400
+						"default": 400
 					},
 					{
-						"default": 500
+						"semibold": 600
 					},
 					{
 						"bold": 700
 					},
 					{
-						"black": 900
+						"extra-bold": 800
 					}
 				]
 			},
@@ -141,7 +139,7 @@
 				},
 				{
 					"name": "md",
-					"value": 14
+					"value": 13
 				},
 				{
 					"name": "lg",
@@ -169,7 +167,7 @@
 				}
 			]
 		},
-		"intensity": {
+		"strength": {
 			"reasoning": [
 				{
 					"decision": "Naming",
@@ -188,19 +186,19 @@
 			"list": [
 				{
 					"name": "weakest",
-					"value": 0.4
+					"value": 0.34
 				},
 				{
 					"name": "weak",
-					"value": 0.55
+					"value": 0.57
 				},
 				{
 					"name": "default",
-					"value": 0.7
+					"value": 0.8
 				},
 				{
 					"name": "strong",
-					"value": 0.85
+					"value": 0.9
 				},
 				{
 					"name": "strongest",
@@ -597,7 +595,7 @@
 				}
 			]
 		},
-		"intensity": {
+		"strength": {
 			"reasoning": [
 				{
 					"decision": "Naming",
@@ -965,7 +963,7 @@
 				}
 			]
 		},
-		"intensity": {
+		"strength": {
 			"reasoning": [
 				{
 					"decision": "Naming",
