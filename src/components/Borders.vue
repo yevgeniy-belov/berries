@@ -1,10 +1,9 @@
 <template>
-	<div class="" style="font-size: 3px; background-color: #eee; padding: 5px">
+	<div class="border-strongest border-dotted" style="font-size: 3px; background-color: #eee; padding: 5px">
 		<template v-for="(borderCase, index) in cases" :key="index">
 			<div
-				class="px-2 py-1 bg-aside"
+				class="px-2 py-1 bg-aside inline-block"
 				:class="`${borderCase}`"
-				style="display: inline-block; margin: 1px; padding: 4px; background-color: #fff"
 			>
 				<div class="" v-for="(claz, index) in borderCase.split(' ')" :key="index">{{ claz }}</div>
 			</div>

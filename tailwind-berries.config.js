@@ -9,8 +9,7 @@ const text = require( './src/lib/text' );
 
 module.exports = {
 	theme: {
-		textColor: {},
-		fontFamily: { 'sans': ['Roboto'], 'mono': ['Roboto Mono'] },
+		fontFamily: { 'sans': ['Open Sans'], 'mono': ['Roboto Mono'] },
 		fontSize: tools.arrayToKeyValue( SSOT.typography.sizes.list ),
 		container: {
 			center: true,
@@ -26,18 +25,30 @@ module.exports = {
 				'.theme': {
 					...getColors.colorsVars( [...SSOT.colors.list] ),
 					...getColors.layoutColorsVars( [...SSOT.layoutColors.list] ),
-					...borders.rootVars( SSOT ),
 					...shadows.rootVars( SSOT ),
 					...text.rootVars( SSOT ),
+				}
+			} );
+			addBase( {
+				'.border': {
+					...borders.rootVars( SSOT ),
 				}
 			} );
 			addUtilities( borders.rules( SSOT ) );
 			addUtilities( shadows.rules( SSOT ) );
 			addUtilities( getColors.bgColor( 'bg', [...SSOT.colors.list, ...SSOT.layoutColors.list] ) ); // Must come before any modifiers.
+			addUtilities( {
+				'.interactive': { backgroundColor: 'hsla(var(--fg-hue), var(--fg-saturation), var(--fg-lightness), 0.05)' },
+				'.interactive-hover': { backgroundColor: 'hsla(var(--fg-hue), var(--fg-saturation), var(--fg-lightness), 0.1)' },
+				'.interactive-active': { backgroundColor: 'hsla(var(--fg-hue), var(--fg-saturation), var(--fg-lightness), 0.15)' },
+				'.interactive-focus': { backgroundColor: 'hsla(var(--fg-hue), var(--fg-saturation), var(--fg-lightness), 0.05)' },
+				'.interactive-disabled': { backgroundColor: 'hsla(var(--fg-hue), var(--fg-saturation), var(--fg-lightness), 0.05)' },
+				// 
+			}, ['hover', 'active', 'focus'] )
 			addUtilities( getColors.customLightness( 'bg', SSOT.colors.list ), ['hover', 'focus'] ); // Must come after colors.
 			addUtilities( getColors.transparencies( SSOT.transparencies.list ) ); // Must come after lightness.
 			addUtilities( getColors.blurs( SSOT.blurs.list ) );
-			addUtilities( text.rules( SSOT ) );
+			addUtilities( text.rules( SSOT ), ['hover', 'active', 'focus'] );
 			addUtilities( {
 				'.container': {
 					maxWidth: '100%',
