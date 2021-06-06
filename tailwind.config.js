@@ -6,6 +6,7 @@ module.exports = {
   presets: [
     require( './tailwind-berries.config.js' )
   ],
+  corePlugs: false,
   mode: 'jit',
   purge: [
     './index.html',
@@ -24,25 +25,7 @@ module.exports = {
         'http://localhost:3000/kit',
       ], regexp );
     } ),
-    plugin( function ( { addUtilities } ) {
-
-      addUtilities( {
-        '.container': {
-          maxWidth: '100%',
-          '@screen sm': {
-            maxWidth: '640px',
-          },
-          '@screen md': {
-            maxWidth: '768px',
-          },
-          '@screen lg': {
-            maxWidth: '1024px',
-          },
-          '@screen xl': {
-            maxWidth: '1280px',
-          },
-        }
-      } )
+    plugin( function ( {  } ) {
 
       /*--------------------------------------------------------------------------
          Do not remove the block below!
@@ -57,7 +40,7 @@ module.exports = {
       ];
       tailwindConfigChanger.watch( watchList );
       /*
-       tailwindConfigChanger state: a.
+       tailwindConfigChanger state: b.
       --------------------------------------------------------------------------*/
     } ),
   ],
