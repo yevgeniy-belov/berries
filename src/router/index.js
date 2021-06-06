@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../components/Home.vue'
 import Compact from '../components/Compact.vue'
 import Borders from '../components/Borders.vue'
+import Buttons from '../components/Buttons.vue'
 import Kit from '../components/Kit.vue'
 import Shadows from '../components/Shadows.vue'
 import Typography from '../components/Typography.vue'
@@ -41,6 +42,11 @@ const routes = [
         path: '/Backgrounds',
         name: 'Backgrounds',
         component: Backgrounds,
+    },
+    {
+        path: '/Buttons',
+        name: 'Buttons',
+        component: Buttons,
     },
 ]
 const router = createRouter({
