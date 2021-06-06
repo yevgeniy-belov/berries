@@ -1,14 +1,12 @@
 <template>
-	<div class="theme flex flex-1 flex-col " :class="`${theme}`">
+	<div class="theme flex flex-1 flex-col relative" :class="`${theme}`">
 		<select v-model="theme" name="theme" id="pet-select" class="text-black">
 			<option value="">--Please choose an option--</option>
-			<option value="theme-bright">Bright</option>
+			<option value="theme-light">Light</option>
 			<option value="theme-dark">Dark</option>
 		</select>
-    <div class="flex-grow flex-shrink">
-
-		<router-view />
-    </div>
+			<router-view />
+		
 	</div>
 </template>
 
