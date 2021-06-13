@@ -1,26 +1,15 @@
 {
-	"concerns": [
-		{
-			"title": "Contradicting decisions",
-			"body": "SSOT might include multiple, conflicting decisions in regards to the same question.",
-			"possibleSolutions": [
-				"Require questions states as a mandatory part of the SSOT format.",
-				"Address most of the potential contradiction cases by explicitly providing both explicit and implicit values."
-			]
-		}
-	],
 	"about": {
-		"ssot": {
-			"description": "SSOT - Single Source Of Truth - the place where design systems starts."
-		},
 		"system": {
 			"name": "Berries",
+			"description": "Systematized UI elements.",
 			"motto": "Everything is connected.",
-			"subTitle": "A design system for building web applications",
-			"description": "",
 			"paragraphs": [
 				"Unlike most of the design systems Berries starts from a single file.\nThis file contains the fundamental properties, guidelines and instructions of the system - a DNA if you will. It's the place where the most important design decisions are expressed and articulated."
 			]
+		},
+		"ssot": {
+			"description": "SSOT - Single Source Of Truth - the place where design systems starts."
 		}
 	},
 	"principles": {
@@ -36,6 +25,16 @@
 			"quote": "Everything should be made as simple as possible, but no simpler. Albert Einstein."
 		}
 	},
+	"concerns": [
+		{
+			"title": "Contradicting decisions",
+			"body": "SSOT might include multiple, conflicting decisions in regards to the same question.",
+			"possibleSolutions": [
+				"Require questions states as a mandatory part of the SSOT format.",
+				"Address most of the potential contradiction cases by explicitly providing both explicit and implicit values."
+			]
+		}
+	],
 	"nomenclature": {
 		"title": "Practical Nomenclature",
 		"subTitle": "Functional. Finite. Consistent.",
@@ -608,8 +607,8 @@
 			],
 			"default": {
 				"reasoning": [],
-				"name": "default",
-				"value": 0.09
+				"regular": "medium",
+				"accent": "strongest"
 			},
 			"list": [
 				{
@@ -625,7 +624,7 @@
 					"value": 0.06
 				},
 				{
-					"name": "default",
+					"name": "medium",
 					"value": 0.09
 				},
 				{
