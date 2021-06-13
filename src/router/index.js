@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../components/Home.vue'
 import Compact from '../components/Compact.vue'
-import Borders from '../components/Borders.vue'
+import Borders from '../components/Borders-modular.vue'
 import Buttons from '../components/Buttons.vue'
 import Kit from '../components/Kit.vue'
 import Shadows from '../components/Shadows.vue'

@@ -1,8 +1,14 @@
 <template>
-	<div class="border-strongest border-dotted" style="font-size: 3px; background-color: #eee; padding: 5px">
+	<div class=" border m-1 p-1 border-dotted flex flex-wrap"
+	style="
+	zoom: 6;
+	font-size: 2px;
+	"
+	>
 		<template v-for="(borderCase, index) in cases" :key="index">
 			<div
-				class="px-2 py-1 bg-aside inline-block"
+				class="px-1 py-1 bg-aside"
+				style="padding:4px; margin:1px"
 				:class="`${borderCase}`"
 			>
 				<div class="" v-for="(claz, index) in borderCase.split(' ')" :key="index">{{ claz }}</div>
@@ -20,31 +26,13 @@ export default defineComponent({
 			ssot: ssot,
 			cases: [
 				'border',
-				'border border-primary',
-				'border border-primary border-t-dashed border-b-dotted border-b-success border-r-danger',
-				'border border-weakest border-r-strongest border-primary border-t-dashed border-b-dotted border-b-success border-r-warning border-r-boldest border-b-strongest rounded-xl',
-				'border-danger border-bold border-l border-dashed',
-				'border-danger border-l border-dashed',
-				'border-danger border border-dashed',
-				'border-danger border border-b-warning border-l-info border-dotted',
-				'border border-dashed border-t-danger',
-				'border border-r-danger',
-				'border-t',
-				'border-t border-dotted',
-				'border-t border-danger',
-				'border border-dotted',
-				'border-t border-dotted border-danger',
-				'border-t border-dotted border-t-danger',
-				'border-t border-t-primary',
-				'border-primary border-b border-b-dashed',
-				'border border-danger',
-				'border border-danger border-weakest',
-				'border border-success',
-				'border border-r-danger',
-				'border-b border-b-success border-t border-t-danger border-t-weakest',
-				'border-b border-strongest',
-				'border border-dashed border-primary  border-l-info',
-				'border border-dashed border-primary border-b-danger border-t-info',
+				'border-r ',
+				'border-r border-weakest',
+				'border-r border-dashed border-strongest',
+				'border-r border-dashed border-danger border-strongest',
+				'border-r-2 ',
+				'border border-danger ',
+				'divide-y divide-dashed',
 			],
 		};
 	},

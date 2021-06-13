@@ -23,6 +23,7 @@ module.exports = {
         'http://localhost:3000/shadows',
         'http://localhost:3000/typography',
         'http://localhost:3000/kit',
+        'http://localhost:3000/borders',
       ], regexp );
     } ),
     plugin( function ( {  } ) {
@@ -34,6 +35,7 @@ module.exports = {
       */
       const watchList = [
         './src/lib/borders.js',
+        './tailwind-berries.config.js',
         './src/lib/text.js',
         './src/lib/shadows.js',
         './src/SSOT.json',

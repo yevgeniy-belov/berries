@@ -21,6 +21,7 @@ module.exports = {
 	corePlugins: corePlugs,
 	plugins: [
 		plugin( function ( { addUtilities, addBase } ) {
+			
 			addBase( {
 				'.theme': {
 					...getColors.colorsVars( [...SSOT.colors.list] ),
@@ -29,13 +30,12 @@ module.exports = {
 					...text.rootVars( SSOT ),
 				}
 			} );
-			addBase( {
-				'.border': {
-					...borders.rootVars( SSOT ),
-				}
-			} );
-			addUtilities( borders.rules( SSOT ) );
-			addUtilities( shadows.rules( SSOT ) );
+
+			addBase( borders.vars(SSOT) );
+
+			addUtilities( borders.rules( SSOT ),['hover', 'active', 'focus'] );
+			// 
+			addUtilities( shadows.rules( SSOT ),['hover'] );
 			addUtilities( getColors.bgColor( 'bg', [...SSOT.colors.list, ...SSOT.layoutColors.list] ) ); // Must come before any modifiers.
 			addUtilities( {
 				'.interactive': { backgroundColor: 'hsla(var(--fg-hue), var(--fg-saturation), var(--fg-lightness), 0.05)' },
