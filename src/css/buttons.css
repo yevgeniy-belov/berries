@@ -1,0 +1,36 @@
+.btn {
+	line-height: 28px;
+
+	&:focus {
+		outline: unset;
+		@apply ring;
+	}
+
+	@apply border
+	px-3
+	interactive
+	hover:interactive-hover
+	active:interactive-active
+	hover:text-strong
+	active:text-strongest;
+
+	&:disabled {
+		line-height: 30px;
+		@apply interactive-disabled cursor-not-allowed border-none text-weakest;
+	}
+}
+
+@define-mixin btn-dark {
+	--fg-lightness: 100%;
+	line-height: 30px;
+	border: none;
+	color: $text-default;
+}
+
+.btn--primary {
+	@mixin btn-dark;
+	@apply bg-primary
+	hover:bg-primary-dark
+	active:bg-primary-darker
+	focus:bg-primary-dark;
+}

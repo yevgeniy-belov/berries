@@ -1,5 +1,4 @@
-@import "./unsorted.css";
-@import "./theme.css";
+@import "./styles.css";
 
 @tailwind base;
 @tailwind components;

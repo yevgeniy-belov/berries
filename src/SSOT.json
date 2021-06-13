@@ -1,26 +1,15 @@
 {
-	"concerns": [
-		{
-			"title": "Contradicting decisions",
-			"body": "SSOT might include multiple, conflicting decisions in regards to the same question.",
-			"possibleSolutions": [
-				"Require questions states as a mandatory part of the SSOT format.",
-				"Address most of the potential contradiction cases by explicitly providing both explicit and implicit values."
-			]
-		}
-	],
 	"about": {
-		"ssot": {
-			"description": "SSOT - Single Source Of Truth - the place where design systems starts."
-		},
 		"system": {
 			"name": "Berries",
+			"description": "Systematized UI elements.",
 			"motto": "Everything is connected.",
-			"subTitle": "A design system for building web applications",
-			"description": "",
 			"paragraphs": [
 				"Unlike most of the design systems Berries starts from a single file.\nThis file contains the fundamental properties, guidelines and instructions of the system - a DNA if you will. It's the place where the most important design decisions are expressed and articulated."
 			]
+		},
+		"ssot": {
+			"description": "SSOT - Single Source Of Truth - the place where design systems starts."
 		}
 	},
 	"principles": {
@@ -36,6 +25,16 @@
 			"quote": "Everything should be made as simple as possible, but no simpler. Albert Einstein."
 		}
 	},
+	"concerns": [
+		{
+			"title": "Contradicting decisions",
+			"body": "SSOT might include multiple, conflicting decisions in regards to the same question.",
+			"possibleSolutions": [
+				"Require questions states as a mandatory part of the SSOT format.",
+				"Address most of the potential contradiction cases by explicitly providing both explicit and implicit values."
+			]
+		}
+	],
 	"nomenclature": {
 		"title": "Practical Nomenclature",
 		"subTitle": "Functional. Finite. Consistent.",
@@ -57,7 +56,7 @@
 	"typography": {
 		"reasoning": [
 			{
-				"title": "Why Roboto family?",
+				"title": "Why Open Sans family?",
 				"paragraphs": [
 					"This is why."
 				]
@@ -71,26 +70,24 @@
 		],
 		"families": [
 			{
-				"name": "Roboto",
-				"about": "Roboto has a dual nature. It has a mechanical skeleton and the forms are largely geometric. At the same time, the font features friendly and open curves. While some grotesks distort their letterforms to force a rigid rhythm, Roboto doesn’t compromise, allowing letters to be settled into their natural width. This makes for a more natural reading rhythm more commonly found in humanist and serif types. (src: https://fonts.google.com/specimen/Roboto#about)",
+				"name": "Open Sans",
+				"about": "",
 				"weights": [
-					{
-						"thin": 100
-					},
+					
 					{
 						"light": 300
 					},
 					{
-						"regular": 400
+						"default": 400
 					},
 					{
-						"default": 500
+						"semibold": 600
 					},
 					{
 						"bold": 700
 					},
 					{
-						"black": 900
+						"extra-bold": 800
 					}
 				]
 			},
@@ -141,7 +138,7 @@
 				},
 				{
 					"name": "md",
-					"value": 14
+					"value": 13
 				},
 				{
 					"name": "lg",
@@ -169,7 +166,7 @@
 				}
 			]
 		},
-		"intensity": {
+		"strength": {
 			"reasoning": [
 				{
 					"decision": "Naming",
@@ -188,19 +185,19 @@
 			"list": [
 				{
 					"name": "weakest",
-					"value": 0.4
+					"value": 0.34
 				},
 				{
 					"name": "weak",
-					"value": 0.55
+					"value": 0.57
 				},
 				{
 					"name": "default",
-					"value": 0.7
+					"value": 0.8
 				},
 				{
 					"name": "strong",
-					"value": 0.85
+					"value": 0.9
 				},
 				{
 					"name": "strongest",
@@ -597,7 +594,7 @@
 				}
 			]
 		},
-		"intensity": {
+		"strength": {
 			"reasoning": [
 				{
 					"decision": "Naming",
@@ -610,8 +607,8 @@
 			],
 			"default": {
 				"reasoning": [],
-				"name": "default",
-				"value": 0.09
+				"regular": "medium",
+				"accent": "strongest"
 			},
 			"list": [
 				{
@@ -627,7 +624,7 @@
 					"value": 0.06
 				},
 				{
-					"name": "default",
+					"name": "medium",
 					"value": 0.09
 				},
 				{
@@ -965,7 +962,7 @@
 				}
 			]
 		},
-		"intensity": {
+		"strength": {
 			"reasoning": [
 				{
 					"decision": "Naming",

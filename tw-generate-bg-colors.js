@@ -14,13 +14,10 @@ module.exports = {
 		data.forEach( colorItem => {
 			colors[`--h-${colorItem.name}`] = `${colorItem.hsl[0]}`;
 			colors[`--s-${colorItem.name}`] = `${colorItem.hsl[1]}`;
-			colors[`--l-${colorItem.name}`] = `calc(var(--surface-lightness) + var(--lightness-delta-${colorItem.name}))`;
+			colors[`--l-${colorItem.name}`] = `calc(var(--bg-lightness) + var(--lightness-delta-${colorItem.name}))`;
 			colors[`--color-${colorItem.name}`] = `hsla( var(--h-${colorItem.name}), var(--s-${colorItem.name}), var(--l-${colorItem.name}), var(--opacity))`;
 		} );
 		return colors;
-		// 	--l-content: calc(var(--surface-lightness) + var(--lightness-delta-content));
-		// --l-aside: calc(var(--surface-lightness) + var(--lightness-delta-aside));
-		// --l-canvas: calc(var(--surface-lightness) + var(--lightness-delta-canvas));
 	},
 	colorsVars: function ( data ) {
 		let colors = {};

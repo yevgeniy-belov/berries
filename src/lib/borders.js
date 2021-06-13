@@ -1,170 +1,131 @@
-const sides = [
-  "", "-top", "-right", "-bottom", "-left"
-];
+// -------------------------------------------------------
+// * Alias
+//   An additional, comma separated CSS selector chain that doesn't have an explicit modifier.
+//   Example: ".border-primary-strongest, .border-primary" - "strongest" variant is default hence it will have an implicit alias.
+// -------------------------------------------------------
+
+const sides = ['all', 'top', 'right', 'bottom', 'left'];
+const styles = ['solid', 'dashed', 'dotted'];
 
 module.exports = {
+	strengthVars: function ( ssot ) {
+		let props = {};
+		
+		ssot.border.strength.list.forEach( strength => {
+			props[`--border-color-${strength.name}`] = `hsla(0, 0%, var(--fg-lightness), ${strength.value})`;
+			ssot.colors.list.forEach( color => {
+				// About the "1 / ..." thing: it makes the strongest accent variant to be fully opaque.
+				props[`--border-color-${color.name}-${strength.name}`] =
+				`hsla(var(--h-${color.name}),
+				var(--s-${color.name}),
+				var(--l-${color.name}),
+				${strength.value * ( 1 / ssot.border.strength.list[ssot.colors.list.length].value )})`
+				;
+			} )
+		} );
+		
+		props['--border-color'] = `var(--border-color-${ssot.border.strength.default.regular})`;
 
-  rootVars: function ( ssot ) {
-    let defaultColor = ssot.border.intensity.default;
-    let property = {};
-    let properties = {};
+		return props;
+	},
 
-    property['--border-alpha-base'] = '1';
-    property['--border-alpha-factor'] = `${defaultColor.value || 0.5}`;
+	globalProps: function () {
+		let props = {};
+		sides.forEach( side => {
+			props[`--border-${side}-width`] = `0`;
+			props[`--border-${side}-style`] = `solid`;
+			props[`--border-${side}-color`] = `var(--border-color)`;
+			props[`border-${side}`] = `var(--border-${side}-width) var(--border-${side}-style) var(--border-${side}-color)`;
+		} );
 
-    sides.forEach( side => {
-      property[`--border${side}-style`] = 'solid';
-      property[`--border${side}-width`] = '0';
-      property[`--border${side}-alpha-base`] = '1';
-      property[`--border${side}-alpha-factor`] = `${defaultColor.value || 0.5}`;
-      property[`--border${side}-hue`] = '0';
-      property[`--border${side}-saturation`] = '0%';
-      property[`--border${side}-lightness`] = 'var(--fg-lightness)';
-
-    } );
-    properties['#root'] = property;
-
-    return property
-  },
-
-  sidePropertyValue: function ( value, side, property ) {
-
-    if ( value === 'color' ) {
-      return `hsla(var(--border${side}-hue),var(--border${side}-saturation),var(--border${side}-lightness),calc(var(--border${side}-alpha-base) * var(--border${side}-alpha-factor)))`;
-    }
-    else
-      return property.value;
-
-  },
-  sides: function ( type ) {
-    let props = {};
-    let colorSides = [];
-    if ( type === 'all-sides' ) {
-      colorSides = [];
-      let sides = ["-top", "-right", "-bottom", "-left"]
-
-      let sideProperty = {};
-      sides.forEach( side => {
-        sideProperty[`border${side}-style`] = `var(--border${side}-style)`;
-        sideProperty[`--border${side}-width`] = '1px';
-        sideProperty[`border${side}-width`] = `var(--border${side}-width)`;
-        sideProperty['--opacity'] = '1';
-        sideProperty[`--l${side}-factor`] = '1';
-        sideProperty[`--border${side}-hue`] = '0';
-        sideProperty[`--border${side}-saturation`] = '0%';
-        sideProperty[`--border${side}-lightness`] = 'var(--fg-lightness)';
-        sideProperty[`border${side}-color`] = `hsla(var(--border${side}-hue),var(--border${side}-saturation),var(--border${side}-lightness),calc(var(--border${side}-alpha-base) * var(--border${side}-alpha-factor)))`;
-      } );
-      props['.border'] = sideProperty;
-
-    };
-
-    if ( type === 'per-side' ) {
-      colorSides = ["-top", "-right", "-bottom", "-left"]
-    };
-
-    colorSides.forEach( side => {
-      let sideProperty = {};
-
-      sideProperty[`border${side}-style`] = `var(--border${side}-style)`;
-      sideProperty[`--border${side}-width`] = '1px';
-      sideProperty[`border${side}-width`] = `var(--border${side}-width)`;
-      sideProperty['--opacity'] = '1';
-      sideProperty[`--l${side}-factor`] = '1';
-      sideProperty[`--border${side}-hue`] = '0';
-      sideProperty[`--border${side}-saturation`] = '0%';
-      sideProperty[`--border${side}-lightness`] = 'var(--fg-lightness)';
-      sideProperty[`border${side}-color`] = `hsla(var(--border${side}-hue),var(--border${side}-saturation),var(--border${side}-lightness),calc(var(--border${side}-alpha-base) * var(--border${side}-alpha-factor)))`;
-
-      props[`.border${side.substring( 0, 2 )}`] = sideProperty;
+		return props;
+	},
 
 
-    } );
+	rules: function ( ssot ) {
+		let props = {};
+		// Strength
+		ssot.border.strength.list.forEach( strength => {
+			// Removes the 'default' part.
+			let strengthName = strength.name !== 'default' ? `-${strength.name}` : '';
+			props[`.border${strengthName}`] = {
+				'--border-top-color': `var(--border-color${strengthName})`,
+				'--border-right-color': `var(--border-color${strengthName})`,
+				'--border-bottom-color': `var(--border-color${strengthName})`,
+				'--border-left-color': `var(--border-color${strengthName})`,
+			};
+			if ( strength.name !== 'default' ) {
+				props[`.border-t${strengthName}`] = { '--border-top-color': `var(--border-color${strengthName})` }
+				props[`.border-r${strengthName}`] = { '--border-right-color': `var(--border-color${strengthName})` }
+				props[`.border-b${strengthName}`] = { '--border-bottom-color': `var(--border-color${strengthName})` }
+				props[`.border-l${strengthName}`] = { '--border-left-color': `var(--border-color${strengthName})` }
+			}
+		} );
 
-    return props;
-  },
+		// Color
+		// Generate less specific color rules:
+		ssot.colors.list.forEach( color => {
+			ssot.border.strength.list.forEach( strength => {
+				// Adds *aliases for default strengths. 
+				let defaultAllSidesAlias = `${strength.name === ssot.border.strength.default.accent ?
+					`, .border-${color.name}` : ``
+					}`;
+				props[`.border-${color.name}-${strength.name}${defaultAllSidesAlias}`] = {
+					'--border-top-color': `var(--border-color-${color.name}-${strength.name})`,
+					'--border-right-color': `var(--border-color-${color.name}-${strength.name})`,
+					'--border-bottom-color': `var(--border-color-${color.name}-${strength.name})`,
+					'--border-left-color': `var(--border-color-${color.name}-${strength.name})`,
+				};
+			} )
+		} );
 
-  property: function ( customPropertyName, propertyVariants ) {
-    let props = {};
+		// Generate more specific color rules:
+		ssot.colors.list.forEach( color => {
+			ssot.border.strength.list.forEach( strength => {
+				props[`.border-t-${color.name}-${strength.name}${`${strength.name === ssot.border.strength.default.accent ?`, .border-t-${color.name}` : ``}`}`] = { '--border-top-color': `var(--border-color-${color.name}-${strength.name})` }
+				props[`.border-r-${color.name}-${strength.name}${`${strength.name === ssot.border.strength.default.accent ?`, .border-r-${color.name}` : ``}`}`] = { '--border-right-color': `var(--border-color-${color.name}-${strength.name})` }
+				props[`.border-b-${color.name}-${strength.name}${`${strength.name === ssot.border.strength.default.accent ?`, .border-b-${color.name}` : ``}`}`] = { '--border-bottom-color': `var(--border-color-${color.name}-${strength.name})` }
+				props[`.border-l-${color.name}-${strength.name}${`${strength.name === ssot.border.strength.default.accent ?`, .border-l-${color.name}` : ``}`}`] = { '--border-left-color': `var(--border-color-${color.name}-${strength.name})` }
+			} )
+		} );
 
-    propertyVariants.forEach( property => {
-      sides.forEach( side => {
-        if ( side !== '' ) {
-          props[`.border${side.substring( 0, 2 )}-${property.name}`] = {
-            [`--border${side}-${customPropertyName}`]: `${property.value}`
-          };
-        } else {
-          let allSides = {};
-          allSides[`--border-${customPropertyName}`] = `${property.value}`;
-          allSides[`--border-top-${customPropertyName}`] = `${property.value}`;
-          allSides[`--border-right-${customPropertyName}`] = `${property.value}`;
-          allSides[`--border-bottom-${customPropertyName}`] = `${property.value}`;
-          allSides[`--border-left-${customPropertyName}`] = `${property.value}`;
-          props[`.border-${property.name}`] = allSides;
+		// Width
+		ssot.border.width.list.forEach( width => {
+			// Removes the 'default' part.
+			let widthName = width.name !== 'default' ? `-${width.name}` : '';
+			props[`.border${widthName}`] = {
+				'--border-top-width': `${width.value}`,
+				'--border-right-width': `${width.value}`,
+				'--border-bottom-width': `${width.value}`,
+				'--border-left-width': `${width.value}`,
+			};
+			props[`.border-t${widthName}`] = { '--border-top-width': `${width.value}` }
+			props[`.border-r${widthName}`] = { '--border-right-width': `${width.value}` }
+			props[`.border-b${widthName}`] = { '--border-bottom-width': `${width.value}` }
+			props[`.border-l${widthName}`] = { '--border-left-width': `${width.value}` }
+		} );
 
-        }
-      } );
-    } );
+		// Style
+		styles.forEach( style => {
+			props[`.border-${style}`] = {
+				'--border-top-style': `${style}`,
+				'--border-right-style': `${style}`,
+				'--border-bottom-style': `${style}`,
+				'--border-left-style': `${style}`,
+			};
+			props[`.border-t-${style}`] = { '--border-top-style': `${style}` }
+			props[`.border-r-${style}`] = { '--border-right-style': `${style}` }
+			props[`.border-b-${style}`] = { '--border-bottom-style': `${style}` }
+			props[`.border-l-${style}`] = { '--border-left-style': `${style}` }
+		} );
 
-    return props;
-  },
+		return props;
+	},
 
-  colors: function ( type, colors, defaultColor ) {
-    let props = {};
-
-    // Splitting general (all-sides) rules from more specific ( per - side ) rules.
-    // Otherwise, some general rules will appear after some specific ones.
-
-    let colorSides = [];
-    if ( type === 'all-sides' ) {
-      colorSides = [""]
-    };
-
-    if ( type === 'per-side' ) {
-      colorSides = ["-top", "-right", "-bottom", "-left"]
-    };
-
-    colors.forEach( color => {
-      colorSides.forEach( side => {
-        let colorProp = {};
-        colorProp['--opacity'] = '1';
-        colorProp[`--l${side}-factor`] = '1';
-        // colorProp[`--border${side}-hue`] = `${color.hsl[0]}`;
-        // colorProp[`--border${side}-saturation`] = `${color.hsl[1]}`;
-        // colorProp[`--border${side}-lightness`] = `${color.hsl[2]}`;
-        colorProp[`--border${side}-alpha-base`] = `${defaultColor.value * ( 1 / defaultColor.value ) * 3.5 || 1}`;
-        colorProp[`--border${side}-hue`] = `var(--h-${color.name})`;
-        colorProp[`--border${side}-saturation`] = `var(--s-${color.name})`;
-        colorProp[`--border${side}-lightness`] = `var(--l-${color.name})`;
-        colorProp[`border${side}-color`] = `hsla(var(--border${side}-hue),var(--border${side}-saturation),var(--border${side}-lightness),calc(var(--border${side}-alpha-base) * var(--border${side}-alpha-factor)))`;
-        props[`.border${side.substring( 0, 2 )}-${color.name}`] = colorProp;
-      } )
-    } )
-    return props;
-  },
-
-  rules: function ( ssot ) {
-    let intensities = ssot.border.intensity.list;
-    let defaultColor = ssot.border.intensity.default;
-    let weakestIntensity = '';
-    intensities.forEach( intensity => {
-      if ( intensity.name === 'weakest' ) {
-        weakestIntensity = intensity.value;
-      }
-    } );
-
-    return {
-      ...module.exports.sides( 'all-sides' ),
-      ...module.exports.sides( 'per-side' ),
-
-      ...module.exports.colors( 'all-sides', ssot.colors.list, defaultColor ),
-      ...module.exports.colors( 'per-side', ssot.colors.list, defaultColor ),
-      //
-      ...module.exports.property( 'alpha-factor', ssot.border.intensity.list ),
-      ...module.exports.property( 'width', ssot.border.width.list ),
-      ...module.exports.property( 'style', ssot.border.style.list ),
-
-    }
-  },
-
+	vars: function ( ssot ) {
+		return {
+			'.theme': { ...module.exports.strengthVars( ssot ) },
+			'*, ::before, ::after ': { ...module.exports.globalProps() },
+		};
+	}
 }

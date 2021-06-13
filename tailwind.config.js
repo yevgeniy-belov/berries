@@ -6,6 +6,7 @@ module.exports = {
   presets: [
     require( './tailwind-berries.config.js' )
   ],
+  corePlugs: false,
   mode: 'jit',
   purge: [
     './index.html',
@@ -22,27 +23,10 @@ module.exports = {
         'http://localhost:3000/shadows',
         'http://localhost:3000/typography',
         'http://localhost:3000/kit',
+        'http://localhost:3000/borders',
       ], regexp );
     } ),
-    plugin( function ( { addUtilities } ) {
-
-      addUtilities( {
-        '.container': {
-          maxWidth: '100%',
-          '@screen sm': {
-            maxWidth: '640px',
-          },
-          '@screen md': {
-            maxWidth: '768px',
-          },
-          '@screen lg': {
-            maxWidth: '1024px',
-          },
-          '@screen xl': {
-            maxWidth: '1280px',
-          },
-        }
-      } )
+    plugin( function ( {  } ) {
 
       /*--------------------------------------------------------------------------
          Do not remove the block below!
@@ -51,13 +35,14 @@ module.exports = {
       */
       const watchList = [
         './src/lib/borders.js',
+        './tailwind-berries.config.js',
         './src/lib/text.js',
         './src/lib/shadows.js',
         './src/SSOT.json',
       ];
       tailwindConfigChanger.watch( watchList );
       /*
-       tailwindConfigChanger state: a.
+       tailwindConfigChanger state: b.
       --------------------------------------------------------------------------*/
     } ),
   ],
