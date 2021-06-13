@@ -6,7 +6,7 @@ module.exports = {
 
 		ssot.typography.strength.list.forEach( intensity => {
 			props[`--text-${intensity.name}`] = `hsla(var(--fg-hue), var(--fg-saturation), var(--fg-lightness), ${intensity.value})`,
-				props[`$text-${intensity.name}`] = `hsla(var(--fg-hue), var(--fg-saturation), var(--fg-lightness), ${intensity.value})`
+			props[`$text-${intensity.name}`] = `hsla(var(--fg-hue), var(--fg-saturation), var(--fg-lightness), ${intensity.value})`
 		} );
 		return props;
 	},

@@ -1,18 +1,12 @@
 @define-mixin theme {
-	--bg-color: hsla(var(--h, 120), var(--s, 100%), var(--l, 50%), var(--a, 1));
-	--opacity: 1;
-	--fg-lightness: 0%;
 	--fg-hue: 0;
 	--fg-saturation: 0%;
-	--surface-saturation: 0%;
-	--surface-hue: 0;
-	--color-border: hsla(var(--fg-hue), var(--fg-saturation), var(--fg-lightness), 0.09);
-	--color-border-strongest: hsla(var(--fg-hue), var(--fg-saturation), var(--fg-lightness), 0.32);
+	--fg-lightness: 0%;
 }
 
 @define-mixin theme-dark {
 	--fg-lightness: 100%;
-	--surface-lightness: 0%;
+	--bg-lightness: 0%;
 	--lightness-delta-content: 9%;
 	--lightness-delta-aside: 6%;
 	--lightness-delta-canvas: 3%;
@@ -20,9 +14,30 @@
 	--bs-am-op-weak: 0.2;
 }
 
+@define-mixin theme-dark-primary {
+	--fg-lightness: 100%;
+	--l-factor: 1;
+	--bg-lightness: 17%;
+	
+	--lightness-delta-content: 10%;
+	--lightness-delta-aside: 5%;
+	--lightness-delta-canvas: 0%;
+	--bs-key-op-weak: 0.08;
+	--bs-am-op-weak: 0.08;
+
+	--h-content: var(--h-primary);
+	--s-content: var(--s-primary);
+
+	--h-aside: var(--h-primary);
+	--s-aside: var(--s-primary);
+
+	--h-canvas: var(--h-primary);
+	--s-canvas: var(--s-primary);
+}
+
 @define-mixin theme-light {
 	--fg-lightness: 0%;
-	--surface-lightness: 100%;
+	--bg-lightness: 100%;
 	--lightness-delta-content: 0%;
 	--lightness-delta-aside: -3%;
 	--lightness-delta-canvas: -6%;
@@ -39,5 +54,8 @@
 
 .theme.theme-dark {
 	@mixin theme-dark;
-	
+}
+
+.theme.theme-dark-primary {
+	@mixin theme-dark-primary;
 }
