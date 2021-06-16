@@ -42,7 +42,7 @@ module.exports = {
       ];
       tailwindConfigChanger.watch( watchList );
       /*
-       tailwindConfigChanger state: b.
+       tailwindConfigChanger state: a.
       --------------------------------------------------------------------------*/
     } ),
   ],

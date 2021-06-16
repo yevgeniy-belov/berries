@@ -10,17 +10,15 @@ const styles = ['solid', 'dashed', 'dotted'];
 module.exports = {
 	strengthVars: function ( ssot ) {
 		let props = {};
-		
+		let strongestValue = ssot.border.strength.list[ssot.colors.list.length - 1].value;
 		ssot.border.strength.list.forEach( strength => {
 			props[`--border-color-${strength.name}`] = `hsla(0, 0%, var(--fg-lightness), ${strength.value})`;
 			ssot.colors.list.forEach( color => {
-				// About the "1 / ..." thing: it makes the strongest accent variant to be fully opaque.
 				props[`--border-color-${color.name}-${strength.name}`] =
 				`hsla(var(--h-${color.name}),
 				var(--s-${color.name}),
 				var(--l-${color.name}),
-				${strength.value * ( 1 / ssot.border.strength.list[ssot.colors.list.length].value )})`
-				;
+				${strength.value * ( 1 / strongestValue )})`;
 			} )
 		} );
 		

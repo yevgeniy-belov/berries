@@ -2,6 +2,7 @@
 	--fg-hue: 0;
 	--fg-saturation: 0%;
 	--fg-lightness: 0%;
+	--fg: hsla( var(--fg-hue), var(--fg-saturation), var(--fg-lightness), 1)
 }
 
 @define-mixin theme-dark {
@@ -17,11 +18,12 @@
 @define-mixin theme-dark-primary {
 	--fg-lightness: 100%;
 	--l-factor: 1;
-	--bg-lightness: 17%;
+	--bg-lightness: 16%;
 	
 	--lightness-delta-content: 10%;
 	--lightness-delta-aside: 5%;
 	--lightness-delta-canvas: 0%;
+
 	--bs-key-op-weak: 0.08;
 	--bs-am-op-weak: 0.08;
 

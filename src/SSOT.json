@@ -2,14 +2,13 @@
 	"about": {
 		"system": {
 			"name": "Berries",
-			"description": "Systematized UI elements.",
-			"motto": "Everything is connected.",
+			"description": "Components Library for building web applications",
 			"paragraphs": [
-				"Unlike most of the design systems Berries starts from a single file.\nThis file contains the fundamental properties, guidelines and instructions of the system - a DNA if you will. It's the place where the most important design decisions are expressed and articulated."
+				"Berries is defined by single file which contains fundamental properties, guidelines and usage instructions of the system. It's the place where the most important design decisions are expressed and articulated."
 			]
 		},
 		"ssot": {
-			"description": "SSOT - Single Source Of Truth - the place where design systems starts."
+			"description": "SSOT - Single Source Of Truth."
 		}
 	},
 	"principles": {
@@ -20,21 +19,11 @@
 		},
 		"SAPBN": {
 			"name": "Simple As Possible, But No Simpler",
-			"definition": "A modular scale is a sequence of numbers that relate to one another in a meaningful way. Using the golden ratio, for example, we can produce values for a modular scale by multiplying by 1.618 to arrive at the next highest number, or dividing by 1.618 to arrive at the next number down.",
-			"source": "https://alistapart.com/article/more-meaningful-typography",
-			"quote": "Everything should be made as simple as possible, but no simpler. Albert Einstein."
+			"definition": "",
+			"source": "",
+			"quote": ""
 		}
 	},
-	"concerns": [
-		{
-			"title": "Contradicting decisions",
-			"body": "SSOT might include multiple, conflicting decisions in regards to the same question.",
-			"possibleSolutions": [
-				"Require questions states as a mandatory part of the SSOT format.",
-				"Address most of the potential contradiction cases by explicitly providing both explicit and implicit values."
-			]
-		}
-	],
 	"nomenclature": {
 		"title": "Practical Nomenclature",
 		"subTitle": "Functional. Finite. Consistent.",
@@ -252,6 +241,45 @@
 			}
 		],
 		"list": [
+			{
+				"name": "standout",
+				"hsl": [
+					320,
+					"100%",
+					"50%"
+				],
+				"lightness": [
+					{
+						"name": "lightest",
+						"value": 1.45
+					},
+					{
+						"name": "lighter",
+						"value": 1.3
+					},
+					{
+						"name": "light",
+						"value": 1.15
+					},
+					{
+						"name": "default",
+						"value": 1
+					},
+					{
+						"name": "dark",
+						"value": 0.83
+					},
+					{
+						"name": "darker",
+						"value": 0.66
+					},
+					{
+						"name": "darkest",
+						"value": 0.5
+					}
+				],
+				"description": ""
+			},
 			{
 				"name": "brand",
 				"hsl": [
@@ -996,7 +1024,7 @@
 	"themes": {
 		"about": {
 			"title": "Nested Themes",
-			"body": "Dynamic nature of the system enables to maintain multiple, nested themes. With ease.",
+			"body": "Multiple, nested themes. With ease.",
 			"points": [
 				""
 			]
