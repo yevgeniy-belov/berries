@@ -13,15 +13,9 @@
 }
 .berries-icon {
 	display: grid;
-	--tw-translate-x: 0;
-	--tw-translate-y: 0;
-	--tw-rotate: 0;
-	--tw-skew-x: 0;
-	--tw-skew-y: 0;
-	--tw-scale-x: 1;
-	--tw-scale-y: 1;
-	transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 	--tw-rotate: 45deg;
+	transform: var(--tw-transform);
+	transform: var(--tw-transform);
 	gap: 0.5rem;
 	--berries-icon-size: 50px;
 	grid-template-columns: var(--berries-icon-size) var(--berries-icon-size) var(--berries-icon-size);
@@ -390,7 +384,7 @@ input[type='radio']:checked + label:after {
 	@mixin theme-dark-primary;
 }
 /* @import "./css/buttons.css"; */
-/* ! tailwindcss v2.1.4 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v2.2.4 | MIT License | https://tailwindcss.com */
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -657,14 +651,6 @@ button {
   background-color: transparent;
   background-image: none;
 }
-/**
- * Work around a Firefox/IE bug where the transparent `button` background
- * results in a loss of the default `button` focus styles.
- */
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
 fieldset {
   margin: 0;
   padding: 0;
@@ -727,7 +713,7 @@ body {
   box-sizing: border-box; /* 1 */
   border-width: 0; /* 2 */
   border-style: solid; /* 2 */
-  border-color: #e5e7eb; /* 2 */
+  border-color: currentColor; /* 2 */
 }
 /*
  * Ensure horizontal rules are visible by default
@@ -808,11 +794,20 @@ samp {
   font-family: Roboto Mono;
 }
 /**
- * Make replaced elements `display: block` by default as that's
- * the behavior you want almost all of the time. Inspired by
- * CSS Remedy, with `svg` added as well.
+ * 1. Make replaced elements `display: block` by default as that's
+ *    the behavior you want almost all of the time. Inspired by
+ *    CSS Remedy, with `svg` added as well.
  *
- * https://github.com/mozdevs/cssremedy/issues/14
+ *    https://github.com/mozdevs/cssremedy/issues/14
+ * 
+ * 2. Add `vertical-align: middle` to align replaced elements more
+ *    sensibly by default when overriding `display` by adding a
+ *    utility like `inline`.
+ *
+ *    This can trigger a poorly considered linting error in some
+ *    tools but is included by design.
+ * 
+ *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
  */
 img,
 svg,
@@ -822,8 +817,8 @@ audio,
 iframe,
 embed,
 object {
-  display: block;
-  vertical-align: middle;
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
 }
 /**
  * Constrain images and videos to the parent width and preserve
@@ -836,13 +831,41 @@ video {
   max-width: 100%;
   height: auto;
 }
-* {
+*, ::before, ::after {
+	--tw-translate-x: 0;
+	--tw-translate-y: 0;
+	--tw-rotate: 0;
+	--tw-skew-x: 0;
+	--tw-skew-y: 0;
+	--tw-scale-x: 1;
+	--tw-scale-y: 1;
+	--tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 	--tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
 	--tw-ring-offset-width: 0px;
 	--tw-ring-offset-color: #fff;
 	--tw-ring-color: rgba(59, 130, 246, 0.5);
 	--tw-ring-offset-shadow: 0 0 #0000;
 	--tw-ring-shadow: 0 0 #0000;
+	--tw-blur: var(--tw-empty,/*!*/ /*!*/);
+	--tw-brightness: var(--tw-empty,/*!*/ /*!*/);
+	--tw-contrast: var(--tw-empty,/*!*/ /*!*/);
+	--tw-grayscale: var(--tw-empty,/*!*/ /*!*/);
+	--tw-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+	--tw-invert: var(--tw-empty,/*!*/ /*!*/);
+	--tw-saturate: var(--tw-empty,/*!*/ /*!*/);
+	--tw-sepia: var(--tw-empty,/*!*/ /*!*/);
+	--tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
+	--tw-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+	--tw-backdrop-blur: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-brightness: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-contrast: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-grayscale: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-invert: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-opacity: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-saturate: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-sepia: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .theme {
 	--h-standout: 320;
@@ -1177,14 +1200,14 @@ video {
 		max-width: 1536px;
 	}
 }
+.fixed {
+	position: fixed;
+}
 .absolute {
 	position: absolute;
 }
 .relative {
 	position: relative;
-}
-.fixed {
-	position: fixed;
 }
 .inset-0 {
 	top: 0px;
@@ -1240,13 +1263,8 @@ video {
 	margin-top: 0.25rem;
 	margin-bottom: 0.25rem;
 }
-.mx-10 {
-	margin-left: 2.5rem;
-	margin-right: 2.5rem;
-}
-.-mx-10 {
-	margin-left: -2.5rem;
-	margin-right: -2.5rem;
+.mb-10 {
+	margin-bottom: 2.5rem;
 }
 .mb-6 {
 	margin-bottom: 1.5rem;
@@ -1268,9 +1286,6 @@ video {
 }
 .mb-4 {
 	margin-bottom: 1rem;
-}
-.mb-10 {
-	margin-bottom: 2.5rem;
 }
 .mb-5 {
 	margin-bottom: 1.25rem;
@@ -1302,8 +1317,8 @@ video {
 .h-screen {
 	height: 100vh;
 }
-.h-8 {
-	height: 2rem;
+.h-10 {
+	height: 2.5rem;
 }
 .h-full {
 	height: 100%;
@@ -1326,9 +1341,6 @@ video {
 .h-4 {
 	height: 1rem;
 }
-.h-10 {
-	height: 2.5rem;
-}
 .h-14 {
 	height: 3.5rem;
 }
@@ -1347,8 +1359,8 @@ video {
 .w-24 {
 	width: 6rem;
 }
-.w-8 {
-	width: 2rem;
+.w-10 {
+	width: 2.5rem;
 }
 .w-full {
 	width: 100%;
@@ -1374,9 +1386,6 @@ video {
 .w-1\/2 {
 	width: 50%;
 }
-.w-10 {
-	width: 2.5rem;
-}
 .min-w-\[10ch\] {
 	min-width: 10ch;
 }
@@ -1401,20 +1410,17 @@ video {
 .auto-rows-max {
 	grid-auto-rows: max-content;
 }
-.grid-cols-5 {
-	grid-template-columns: repeat(5, minmax(0, 1fr));
-}
 .grid-cols-3 {
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .grid-cols-7 {
 	grid-template-columns: repeat(7, minmax(0, 1fr));
 }
-.flex-col {
-	flex-direction: column;
-}
 .flex-row {
 	flex-direction: row;
+}
+.flex-col {
+	flex-direction: column;
 }
 .flex-wrap {
 	flex-wrap: wrap;
@@ -1425,23 +1431,11 @@ video {
 .justify-center {
 	justify-content: center;
 }
-.gap-16 {
-	gap: 4rem;
-}
 .gap-1 {
 	gap: 0.25rem;
 }
 .gap-10 {
 	gap: 2.5rem;
-}
-.gap-12 {
-	gap: 3rem;
-}
-.gap-3 {
-	gap: 0.75rem;
-}
-.gap-5 {
-	gap: 1.25rem;
 }
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
 	--tw-space-x-reverse: 0;
@@ -1452,11 +1446,6 @@ video {
 	--tw-space-y-reverse: 0;
 	margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-}
-.space-x-36 > :not([hidden]) ~ :not([hidden]) {
-	--tw-space-x-reverse: 0;
-	margin-right: calc(9rem * var(--tw-space-x-reverse));
-	margin-left: calc(9rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
 	--tw-space-y-reverse: 0;
@@ -1478,21 +1467,6 @@ video {
 	margin-right: calc(1.25rem * var(--tw-space-x-reverse));
 	margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
-.space-x-10 > :not([hidden]) ~ :not([hidden]) {
-	--tw-space-x-reverse: 0;
-	margin-right: calc(2.5rem * var(--tw-space-x-reverse));
-	margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-.space-x-20 > :not([hidden]) ~ :not([hidden]) {
-	--tw-space-x-reverse: 0;
-	margin-right: calc(5rem * var(--tw-space-x-reverse));
-	margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-.space-x-24 > :not([hidden]) ~ :not([hidden]) {
-	--tw-space-x-reverse: 0;
-	margin-right: calc(6rem * var(--tw-space-x-reverse));
-	margin-left: calc(6rem * calc(1 - var(--tw-space-x-reverse)));
-}
 .divide-y > :not([hidden]) ~ :not([hidden]) {
 	--tw-divide-y-reverse: 0;
 	border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -1504,11 +1478,11 @@ video {
 .self-center {
 	align-self: center;
 }
-.overflow-hidden {
-	overflow: hidden;
-}
 .overflow-auto {
 	overflow: auto;
+}
+.overflow-hidden {
+	overflow: hidden;
 }
 .break-all {
 	word-break: break-all;
@@ -1662,6 +1636,9 @@ video {
 .text-lg {
 	font-size: 16px;
 }
+.text-2xs {
+	font-size: 10px;
+}
 .text-xs {
 	font-size: 11px;
 }
@@ -1670,9 +1647,6 @@ video {
 }
 .text-md {
 	font-size: 13px;
-}
-.text-2xs {
-	font-size: 10px;
 }
 .text-3xl {
 	font-size: 32px;
@@ -1705,35 +1679,23 @@ video {
 	outline: 2px solid transparent;
 	outline-offset: 2px;
 }
-.filter {
-	--tw-blur: var(--tw-empty,/*!*/ /*!*/);
-	--tw-brightness: var(--tw-empty,/*!*/ /*!*/);
-	--tw-contrast: var(--tw-empty,/*!*/ /*!*/);
-	--tw-grayscale: var(--tw-empty,/*!*/ /*!*/);
-	--tw-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
-	--tw-invert: var(--tw-empty,/*!*/ /*!*/);
-	--tw-saturate: var(--tw-empty,/*!*/ /*!*/);
-	--tw-sepia: var(--tw-empty,/*!*/ /*!*/);
-	--tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
-	filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
 .blur {
 	--tw-blur: blur(8px);
+	filter: var(--tw-filter);
 }
-.backdrop-filter {
-	--tw-backdrop-blur: var(--tw-empty,/*!*/ /*!*/);
-	--tw-backdrop-brightness: var(--tw-empty,/*!*/ /*!*/);
-	--tw-backdrop-contrast: var(--tw-empty,/*!*/ /*!*/);
-	--tw-backdrop-grayscale: var(--tw-empty,/*!*/ /*!*/);
-	--tw-backdrop-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
-	--tw-backdrop-invert: var(--tw-empty,/*!*/ /*!*/);
-	--tw-backdrop-opacity: var(--tw-empty,/*!*/ /*!*/);
-	--tw-backdrop-saturate: var(--tw-empty,/*!*/ /*!*/);
-	--tw-backdrop-sepia: var(--tw-empty,/*!*/ /*!*/);
-	backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+.filter {
+	filter: var(--tw-filter);
 }
 .backdrop-blur-0 {
 	--tw-backdrop-blur: blur(0);
+	backdrop-filter: var(--tw-backdrop-filter);
+}
+.backdrop-blur-none {
+	--tw-backdrop-blur: blur(0);
+	backdrop-filter: var(--tw-backdrop-filter);
+}
+.backdrop-filter {
+	backdrop-filter: var(--tw-backdrop-filter);
 }
 .transition {
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -2638,6 +2600,7 @@ video {
 }
 .hover\:backdrop-blur-0:hover {
 	--tw-backdrop-blur: blur(0);
+	backdrop-filter: var(--tw-backdrop-filter);
 }
 .hover\:border-stronger:hover {
 	--border-top-color: var(--border-color-stronger);
@@ -2707,19 +2670,8 @@ video {
 	--l-factor: 0.83;
 	background-color: hsla( var(--h-primary), var(--s-primary), calc( var(--l-primary) * var(--l-factor)), var(--opacity));
 }
-@media (min-width: 768px) {
-	.md\:grid-cols-1 {
-		grid-template-columns: repeat(1, minmax(0, 1fr));
-	}
-	.md\:grid-cols-3 {
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-	}
-}
 @media (min-width: 1024px) {
 	.lg\:grid-cols-3 {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-	}
-	.lg\:grid-cols-4 {
-		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 }
