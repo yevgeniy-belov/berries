@@ -20,14 +20,23 @@ module.exports = {
 		return colors;
 	},
 	colorsVars: function ( data ) {
-		let colors = {};
+		let colorsVars = {};
 		data.forEach( colorItem => {
-			colors[`--h-${colorItem.name}`] = `${colorItem.hsl[0]}`;
-			colors[`--s-${colorItem.name}`] = `${colorItem.hsl[1]}`;
-			colors[`--l-${colorItem.name}`] = `${colorItem.hsl[2]}`;
-			colors[`--color-${colorItem.name}`] = `hsla( var(--h-${colorItem.name}), var(--s-${colorItem.name}), var(--l-${colorItem.name}), var(--opacity))`;
+			colorsVars[`--h-${colorItem.name}`] = `${colorItem.hsl[0]}`;
+			colorsVars[`--s-${colorItem.name}`] = `${colorItem.hsl[1]}`;
+			colorsVars[`--l-${colorItem.name}`] = `${colorItem.hsl[2]}`;
+			colorsVars[`--color-${colorItem.name}`] = `hsla( var(--h-${colorItem.name}), var(--s-${colorItem.name}), var(--l-${colorItem.name}), var(--opacity))`;
+			// 
+			colorItem.lightness.forEach( lightness => {
+				let lightnessName = "";
+				if ( lightness.name !== "default" ) {
+					lightnessName = `-${lightness.name}`;
+				}
+				colorsVars[`--color-${colorItem.name}${lightnessName}`] = `hsla( var(--h-${colorItem.name}), var(--s-${colorItem.name}), calc( var(--l-${colorItem.name}) * ${lightness.value}), var(--opacity))`;
+			} )
+			// 
 		} );
-		return colors;
+		return colorsVars;
 	},
 
 	colors: function ( data ) {
