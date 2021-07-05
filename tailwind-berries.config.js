@@ -6,6 +6,7 @@ const SSOT = require( './src/SSOT.json' );
 const borders = require( './src/lib/borders' );
 const shadows = require( './src/lib/shadows' );
 const text = require( './src/lib/text' );
+const flexbox = require( './src/lib/flexbox' );
 
 module.exports = {
 	theme: {
@@ -21,7 +22,7 @@ module.exports = {
 	corePlugins: corePlugs,
 	plugins: [
 		plugin( function ( { addUtilities, addBase } ) {
-			
+
 			addBase( {
 				'.theme': {
 					...getColors.colorsVars( [...SSOT.colors.list] ),
@@ -31,11 +32,12 @@ module.exports = {
 				}
 			} );
 
-			addBase( borders.vars(SSOT) );
+			addBase( borders.vars( SSOT ) );
 
-			addUtilities( borders.rules( SSOT ),['hover', 'active', 'focus'] );
+			addUtilities( borders.rules( SSOT ), ['hover', 'active', 'focus'] );
+			addUtilities( flexbox.rules(), ['hover', 'active', 'focus'] );
 			// 
-			addUtilities( shadows.rules( SSOT ),['hover'] );
+			addUtilities( shadows.rules( SSOT ), ['hover'] );
 			addUtilities( getColors.bgColor( 'bg', [...SSOT.colors.list, ...SSOT.layoutColors.list] ) ); // Must come before any modifiers.
 			addUtilities( {
 				'.interactive': { backgroundColor: 'hsla(var(--fg-hue), var(--fg-saturation), var(--fg-lightness), 0.05)' },
