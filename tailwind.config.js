@@ -18,12 +18,12 @@ module.exports = {
     plugin( function ( { } ) {
       const regexp = /(class="([^"]*)")/g;
       keep.generate( [
-        'http://localhost:3000/home',
-        'http://localhost:3000/compact',
-        'http://localhost:3000/shadows',
-        'http://localhost:3000/typography',
-        'http://localhost:3000/kit',
-        'http://localhost:3000/borders',
+        'http://localhost:4000/home',
+        'http://localhost:4000/compact',
+        'http://localhost:4000/shadows',
+        'http://localhost:4000/typography',
+        'http://localhost:4000/kit',
+        'http://localhost:4000/borders',
       ], regexp );
     } ),
     plugin( function ( {  } ) {
