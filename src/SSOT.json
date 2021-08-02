@@ -640,6 +640,10 @@
 			},
 			"list": [
 				{
+					"name": "opacity-0",
+					"value": 0
+				},
+				{
 					"name": "weakest",
 					"value": 0.03
 				},
