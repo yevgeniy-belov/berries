@@ -7,6 +7,10 @@
 
 @define-mixin theme-dark {
 	--fg-lightness: 100%;
+
+	--fg-h-primary: var(--h-primary);
+	--fg-l-primary: 72%;
+
 	--bg-lightness: 0%;
 	--lightness-delta-content: 9%;
 	--lightness-delta-aside: 6%;
@@ -16,7 +20,12 @@
 }
 
 @define-mixin theme-dark-primary {
+	--sign: -1;
 	--fg-lightness: 100%;
+
+	--fg-h-primary: var(--h-primary);
+	--fg-l-primary: 72%;
+
 	--l-factor: 1;
 	--bg-lightness: 16%;
 	
@@ -38,7 +47,12 @@
 }
 
 @define-mixin theme-light {
+	--sign: 1;
 	--fg-lightness: 0%;
+	
+	--fg-h-primary: var(--h-primary);
+	--fg-l-primary: 28%;
+
 	--bg-lightness: 100%;
 	--lightness-delta-content: 0%;
 	--lightness-delta-aside: -3%;

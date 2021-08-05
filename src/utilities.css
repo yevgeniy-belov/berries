@@ -1,0 +1,7 @@
+@layer utilities {
+	.text-primary-weakest{color: hsla(var(--h-primary), var(--s-primary), var(--fg-l-primary), 0.6)}
+	.text-primary-weak{color: hsla(var(--h-primary), var(--s-primary), var(--fg-l-primary), 0.8)}
+	.text-primary-default{color: hsla(var(--h-primary), var(--s-primary), var(--fg-l-primary), 1)}
+	.text-primary-strong{color: hsla(var(--h-primary), var(--s-primary), calc(var(--fg-l-primary) * calc(1 - calc(var(--sign) * 0.1))), 1)}
+	.text-primary-strongest{color: hsla(var(--h-primary), var(--s-primary), calc(var(--fg-l-primary) * calc(1 - calc(var(--sign) * 0.2))), 1)}
+}

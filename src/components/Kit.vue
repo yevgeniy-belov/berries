@@ -136,9 +136,7 @@
 		<div class="scroll-snap-align-start flex h-screen">
 			<div class="container flex flex-col justify-center">
 				<div class="text-center flex flex-col mb-20">
-					<div class="text-strong m-auto max-w-[40ch] text-4xl -font-light">
-						Nomenclature
-					</div>
+					<div class="text-strong m-auto max-w-[40ch] text-4xl -font-light"> Nomenclature </div>
 				</div>
 				<div class="flex self-center space-x-32 text-lg">
 					<div class="">
@@ -238,7 +236,8 @@
 										<div class="flex items-center justify-center">
 											<div
 												class="
-													w-10 h-10
+													w-10
+													h-10
 													rounded-full
 													bg-content
 													transition
@@ -570,10 +569,8 @@
 										<button
 											class="
 												justify-center
-												hover:bg-content
-												hover:border
-												active:bg-content-dark
-												active:border-weakest
+												hover:bg-content hover:border
+												active:bg-content-dark active:border-weakest
 												focus:outline-none
 												px-3
 												py-1
@@ -586,10 +583,8 @@
 												theme theme-dark
 												justify-center
 												bg-primary
-												hover:bg-hover
-												hover:border-stronger
-												active:bg-primary-dark
-												active:border-weakest
+												hover:bg-hover hover:border-stronger
+												active:bg-primary-dark active:border-weakest
 												border
 												focus:outline-none
 												px-3
