@@ -25,6 +25,11 @@
 
 	--fg-h-primary: var(--h-primary);
 	--fg-l-primary: 72%;
+	--text-primary-weakest: hsla(var(--h-primary), var(--s-primary), var(--fg-l-primary), 0.6);
+	--text-primary-weak: hsla(var(--h-primary), var(--s-primary), var(--fg-l-primary), 0.8);
+	--text-primary-default: hsla(var(--h-primary), var(--s-primary), var(--fg-l-primary), 1);
+	--text-primary-strong: hsla(var(--h-primary), var(--s-primary), calc(var(--fg-l-primary) * calc(1 - calc(var(--sign) * 0.1))), 1);
+	--text-primary-strongest: hsla(var(--h-primary), var(--s-primary), calc(var(--fg-l-primary) * calc(1 - calc(var(--sign) * 0.2))), 1);
 
 	--l-factor: 1;
 	--bg-lightness: 16%;
@@ -49,6 +54,11 @@
 @define-mixin theme-light {
 	--sign: 1;
 	--fg-lightness: 0%;
+	--text-primary-weakest: hsla(var(--h-primary), var(--s-primary), var(--fg-l-primary), 0.6);
+	--text-primary-weak: hsla(var(--h-primary), var(--s-primary), var(--fg-l-primary), 0.8);
+	--text-primary-default: hsla(var(--h-primary), var(--s-primary), var(--fg-l-primary), 1);
+	--text-primary-strong: hsla(var(--h-primary), var(--s-primary), calc(var(--fg-l-primary) * calc(1 - calc(var(--sign) * 0.1))), 1);
+	--text-primary-strongest: hsla(var(--h-primary), var(--s-primary), calc(var(--fg-l-primary) * calc(1 - calc(var(--sign) * 0.2))), 1);
 	
 	--fg-h-primary: var(--h-primary);
 	--fg-l-primary: 28%;
