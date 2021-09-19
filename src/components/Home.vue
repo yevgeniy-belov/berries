@@ -6,15 +6,14 @@
 		<div class="m-7 p-3 border-r border-danger border-dashed">border border-r-danger</div>
 		<div class="m-7 p-3 border border-r-danger border-r">border border-r-danger border-r</div>
 		<div class="m-7 p-3 border-r-danger">border-r-danger</div>
-		<div class="bg-primary">
-		</div>
+		<div class="bg-primary"> </div>
 		<div class="grid grid-cols-7 auto-rows-max -gap-1 m-5 p-2">
 			<template class="" v-for="(color, index) in ssot.colors.list" :key="index">
-				<template v-for="(intensity, index) in ssot.border.intensity.list" :key="index">
+				<template v-for="(strength, index) in ssot.border.strength.list" :key="index">
 					<div
 						class="p-1 *rounded-full"
 						:class="`
-						border border-${color.name} border-${intensity.name}
+						border border-${color.name} border-${strength.name}
 						`"
 					></div>
 				</template>
@@ -22,11 +21,11 @@
 		</div>
 		<div class="grid grid-cols-7 auto-rows-max -gap-1 m-5 p-2">
 			<template class="" v-for="(color, index) in ssot.colors.list" :key="index">
-				<template v-for="(intensity, index) in ssot.border.intensity.list" :key="index">
+				<template v-for="(strength, index) in ssot.border.strength.list" :key="index">
 					<div
 						class="p-1 *rounded-full"
 						:class="`
-						border-l border-l-${color.name} border-l-${intensity.name}
+						border-l border-l-${color.name} border-l-${strength.name}
 						border-t border-t-success
 						border-r-primary border-r
 						border-b border-b-standout
@@ -38,10 +37,10 @@
 		<div class="flex">
 			<div class="grid grid-cols-7 auto-rows-max gap-1 m-5 p-4">
 				<template class="" v-for="(color, index) in ssot.colors.list" :key="index">
-					<template v-for="(intensity, index) in ssot.border.intensity.list" :key="index">
+					<template v-for="(strength, index) in ssot.border.strength.list" :key="index">
 						<div
 							class="p-5 *rounded-full"
-							:class="`border-t border-t-${color.name} border-t-${intensity.name}`"
+							:class="`border-t border-t-${color.name} border-t-${strength.name}`"
 						></div>
 					</template>
 				</template>
@@ -76,16 +75,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
 import ssot from '../SSOT.json';
-export default defineComponent({
+export default ({
 	data() {
 		return {
 			ssot: ssot,
 			abcies: `‘?’“!”(%)[#]{@}/&\<-+÷×=>®©$€£¥¢:;,.*`,
 		};
 	},
-	computed: {
-	},
+	computed: {},
 });
 </script>
