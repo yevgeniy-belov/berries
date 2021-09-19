@@ -1,4 +1,10 @@
-@import "./styles.css";
+@import "./theme.css";
+@import "./utilities.css";
+
+@define-mixin test $a {
+	color: $a;
+}
+@mixin test belov;
 
 @tailwind base;
 @tailwind components;
