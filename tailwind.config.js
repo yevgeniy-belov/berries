@@ -6,7 +6,6 @@ module.exports = {
   presets: [
     require( './tailwind-berries.config.js' )
   ],
-  corePlugs: false,
   mode: 'jit',
   purge: [
     './index.html',
@@ -34,15 +33,13 @@ module.exports = {
          The whole method is a hack but it works. So I don't care.
       */
       const watchList = [
-        './src/lib/borders.js',
         './tailwind-berries.config.js',
-        './src/lib/text.js',
-        './src/lib/shadows.js',
+        './src/lib/**/*.js',
         './src/SSOT.json',
       ];
       tailwindConfigChanger.watch( watchList );
       /*
-       tailwindConfigChanger state: b.
+       tailwindConfigChanger state: a.
       --------------------------------------------------------------------------*/
     } ),
   ],
