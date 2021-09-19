@@ -1,7 +1,54 @@
 @layer utilities {
-	.text-primary-weakest{color: var(--text-primary-weakest)}
-	.text-primary-weak{color: var(--text-primary-weak)}
-	.text-primary-default{color: var(--text-primary-default)}
-	.text-primary-strong{color: var(--text-primary-strong)}
-	.text-primary-strongest{color: var(--text-primary-strongest)}
+	.text-primary-weakest {
+		color: var(--text-primary-weakest);
+	}
+	.text-primary-weak {
+		color: var(--text-primary-weak);
+	}
+	.text-primary-default,
+	.text-primary {
+		color: var(--text-primary-default);
+	}
+	.text-primary-strong {
+		color: var(--text-primary-strong);
+	}
+	.text-primary-strongest {
+		color: var(--text-primary-strongest);
+	}
 }
+
+.text-block.text-block {
+	border: 1px solid transparent;
+	&:before,&:after {
+		display: block;
+		content: '';
+	}
+	&.text-2xs{&:before {margin-top: -5px}&:after {margin-bottom: -5px}}
+	&.text-xs{&:before {margin-top: -5px}&:after {margin-bottom: -5px}}
+	&.text-sm{&:before {margin-top: -6px}&:after {margin-bottom: -6px}}
+	&.text-md{&:before {margin-top: -6px}&:after {margin-bottom: -6px}}
+	&.text-lg{&:before {margin-top: -8px}&:after {margin-bottom: -7px}}
+	&.text-xl{&:before {margin-top: -9px}&:after {margin-bottom: -9px}}
+	&.text-2xl{&:before {margin-top: -11px}&:after {margin-bottom: -10px}}
+	&.text-3xl{&:before {margin-top: -14px}&:after {margin-bottom: -13px}}
+	&.text-4xl{&:before {margin-top: -18px}&:after {margin-bottom: -17px}}
+	&.text-5xl{&:before {margin-top: -43px}&:after {margin-bottom: -38px}}
+}
+
+/* .text-block.text-block {
+	--topCropRatio: 0.2;
+	--bottomCropRatio: 0.16;
+	line-height: calc(1em * var(--line-height));
+	--compensation: calc(var(--size) * calc(var(--line-height) - 1) / 2);
+	border: 1px solid transparent;
+	&:before,&:after {
+		display: block;
+		content: '';
+	}
+	&:before {
+		margin-top: calc(-1px * var(--compensation) + calc(-1px * var(--topCropRatio) * var(--size)));
+	}
+	&:after {
+		margin-bottom: calc(-1px * var(--compensation) + calc(-1px * var(--bottomCropRatio) * var(--size)));
+	}
+} */
