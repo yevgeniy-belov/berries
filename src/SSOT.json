@@ -59,54 +59,43 @@
 		],
 		"families": [
 			{
-				"name": "Open Sans",
+				"name": "Open-Sans",
 				"about": "",
 				"weights": [
-					
 					{
-						"light": 300
+						"name": "light",
+						"value": 300
 					},
 					{
-						"default": 400
+						"name": "default",
+						"value": 400
 					},
 					{
-						"semibold": 600
+						"name": "semibold",
+						"value": 600
 					},
 					{
-						"bold": 700
-					},
-					{
-						"extra-bold": 800
+						"name": "bold",
+						"value": 700
 					}
 				]
 			},
 			{
-				"name": "Roboto Condensed",
+				"name": "Roboto-Mono",
 				"about": "This is the Condensed family, which can be used alongside the normal Roboto family and the Roboto Slab family. (src: https://fonts.google.com/specimen/Roboto+Condensed?query=roboto#about)",
 				"weights": [
+
 					{
-						"light": 300
+						"name": "light",
+						"value": 300
 					},
 					{
-						"regular": 400
+						"name": "regular",
+						"value": 400
 					},
 					{
-						"bold": 700
-					}
-				]
-			},
-			{
-				"name": "Roboto Mono",
-				"about": "This is the Condensed family, which can be used alongside the normal Roboto family and the Roboto Slab family. (src: https://fonts.google.com/specimen/Roboto+Condensed?query=roboto#about)",
-				"weights": [
-					{
-						"light": 300
-					},
-					{
-						"regular": 400
-					},
-					{
-						"bold": 700
+						"name": "bold",
+						"value": 700
 					}
 				]
 			}
@@ -151,10 +140,11 @@
 				},
 				{
 					"name": "5xl",
-					"value": 64
+					"value": 100
 				}
 			]
 		},
+
 		"strength": {
 			"reasoning": [
 				{
