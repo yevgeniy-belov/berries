@@ -27,6 +27,7 @@ const routes = [
         path: '/kit',
         name: 'Kit',
         component: Kit,
+        alias: '',
     },
     {
         path: '/Typography',
