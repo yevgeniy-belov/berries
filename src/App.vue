@@ -15,11 +15,6 @@
 					<input type="radio" v-model="theme" id="huey" name="theme" value="theme-light" checked />
 					<label class="" for="huey">Light</label>
 				</div>
-<!-- 
-				<div class="">
-					<input type="radio" v-model="theme" id="dewey" name="theme" value="theme-dark" />
-					<label class="" for="dewey">Dark</label>
-				</div> -->
 				<div class="">
 					<input type="radio" v-model="theme" id="louie" name="theme" value="theme-dark-primary" />
 					<label class="" for="louie">Dark</label>
@@ -33,13 +28,9 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
 
 export default defineComponent({
 	name: 'App',
-	components: {
-		HelloWorld,
-	},
 	data() {
 		return {
 			theme: '',
