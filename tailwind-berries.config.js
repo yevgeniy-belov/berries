@@ -31,7 +31,8 @@ module.exports = {
 					...getColors.layoutColorsVars( [...SSOT.layoutColors.list] ),
 					...shadows.rootVars( SSOT ),
 					...textStrength.rootVars( SSOT ),
-					...borders.vars( SSOT ),
+					...borders.strengthVars( SSOT ),
+					...borders.globalVars( SSOT ),
 				},
 			}
 			);

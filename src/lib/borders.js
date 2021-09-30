@@ -27,7 +27,7 @@ module.exports = {
 		return props;
 	},
 
-	globalProps: function () {
+	globalVars: function () {
 		let props = {};
 		sides.forEach( side => {
 			props[`--border-${side}-width`] = `0`;
@@ -36,7 +36,7 @@ module.exports = {
 			props[`border-${side}`] = `var(--border-${side}-width) var(--border-${side}-style) var(--border-${side}-color)`;
 		} );
 
-		return props;
+		return {'*, ::before, ::after ': { ...props }}
 	},
 
 
@@ -122,8 +122,7 @@ module.exports = {
 
 	vars: function ( ssot ) {
 		return {
-			'.theme': { ...module.exports.strengthVars( ssot ) },
-			'*, ::before, ::after ': { ...module.exports.globalProps() },
+			'*, ::before, ::after ': { ...module.exports.globalVars() },
 		};
 	}
 }
